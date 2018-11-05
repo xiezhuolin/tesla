@@ -86,6 +86,9 @@ public class UpLoadOrderService extends Service {
 
 	private List<Order> uploadList = new CopyOnWriteArrayList<Order>();
 
+	/**
+	 * 获取网络订单号
+	 */
 	private void getNetOrderInfo() {
 		Log.i(TAG, currentThread().getName() + ">getNetOrderInfo ");
 		excuteCount = 0;
