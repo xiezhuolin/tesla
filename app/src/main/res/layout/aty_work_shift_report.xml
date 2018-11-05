@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="@dimen/dp2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rel_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp60"
+            android:background="@color/transform"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/img_main_title_back"
+                android:paddingRight="5dp"/>
+
+            <TextView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_back"
+                android:background="@color/transparent"
+                android:paddingTop="1dp"
+                android:text="@string/common_back"
+                android:textColor="@color/black"
+                android:textSize="@dimen/str_defaul_24"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="交接班报表"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp25" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/item_spacing20"
+        android:layout_marginLeft="@dimen/item_spacing15"
+        android:layout_marginRight="@dimen/item_spacing15"
+        android:layout_marginTop="@dimen/item_spacing10"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/print_cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/item_spacing5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_gray"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16"/>
+
+        <TextView
+            android:id="@+id/print_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_blue"
+            android:gravity="center"
+            android:text="日结并打印"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_16"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/rel_top"
+        android:id="@+id/sc_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lin_top"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp10"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_main_title"
+                style="@style/table_title_white"
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp3"
+                android:text="智慧收银"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp25"
+                />
+
+            <TextView
+                android:id="@+id/tv_titckTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp10"
+                android:text="日结打印单"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp22"
+                />
+
+            <View
+                style="@style/sty_line"
+                />
+
+            <TextView
+                android:id="@+id/tv_printerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:text="日结人:13945648712"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <TextView
+                android:id="@+id/tv_workShiftName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="班次名称:早班"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <TextView
+                android:id="@+id/tv_timeStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="开始时间:2017.12.12"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <TextView
+                android:id="@+id/tv_timeEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="结束时间:2017.06.06"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+            <TextView
+                android:id="@+id/tv_printTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="小票打印时间:2017.12.14"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+            <TextView
+                android:id="@+id/tv_startWorkShiftCash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="开班钱箱余额:100"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+            <TextView
+                android:id="@+id/tv_endWrkShiftCash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dp10"
+                android:text="交班钱箱余额:100"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <View
+                style="@style/sty_line"
+                />
+
+            <cn.acewill.pos.next.widget.ScrolListView
+                android:id="@+id/lv_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/transparent"
+                android:footerDividersEnabled="true"
+                android:listSelector="@color/transparent"
+                android:transcriptMode="normal"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    style="@style/sty_line"
+                    />
+
+                <View
+                    style="@style/sty_line"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_submitCash_hine"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="应交现金:"
+                            android:textSize="@dimen/sp18"/>
+
+                        <TextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textSize="@dimen/sp18"/>
+
+                        <TextView
+                            android:id="@+id/tv_submitCash"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/tv_orderCount_hine"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=" /元"
+                            android:textSize="@dimen/sp18"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_differenceCash_hine"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="差额:"
+                            android:textSize="@dimen/sp18"/>
+
+                        <TextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textSize="@dimen/sp18"/>
+
+                        <TextView
+                            android:id="@+id/tv_differenceCash"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/tv_orderCount_hine"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=" /元"
+                            android:textSize="@dimen/sp18"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

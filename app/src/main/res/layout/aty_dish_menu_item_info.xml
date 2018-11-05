@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp55"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bg">
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_menu_back"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:layout_marginLeft="@dimen/dp15"
+            android:padding="@dimen/dp10"
+            android:layout_height="match_parent"/>
+
+
+        <TextView
+            android:id="@+id/tv_menu_title"
+            style="@style/table_title_white"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wisdom_cash_register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_24"/>
+
+        <ImageButton
+            android:id="@+id/img_cart"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_menu_gwc"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:background="@color/transparent"
+            android:layout_marginRight="@dimen/dp15"
+            android:padding="@dimen/dp10"
+            android:layout_height="match_parent"/>
+
+
+        <ImageButton
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_menu_search"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:background="@color/transparent"
+            android:layout_toLeftOf="@+id/img_cart"
+            android:layout_marginRight="@dimen/dp15"
+            android:padding="@dimen/dp10"
+            android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lin_sole_out"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="0dp">
+            <ImageView
+                android:id="@+id/iv_dishImagePath"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/img_dish_default_bg"
+                android:scaleType="fitCenter"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_dishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="11111"
+                android:textColor="@color/black"
+                android:textSize="@dimen/str_defaul_26"/>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp20"
+                android:layout_toRightOf="@+id/tv_dishName"
+                android:text="22.00"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/str_defaul_26"/>
+
+            <TextView
+                android:id="@+id/tv_dishInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/dp10"
+                android:layout_below="@+id/tv_dishName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/str_defaul_16"/>
+
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp10"
+                android:src="@mipmap/img_menu_dishinfo_add"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dip"
+            android:textColor="@color/white"
+            android:text="@string/sth_zfb"
+            android:textSize="@dimen/str_defaul_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/text_little_padding" >
+
+        <TextView
+            android:id="@+id/tv_payMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:textColor="@color/black"
+            android:paddingRight="10dp"
+            android:text="@string/sth_cash_pay"
+            android:textSize="@dimen/str_defaul_24" />
+
+        <EditText
+            android:id="@+id/ed_payMoney"
+            style="@style/base_width_match"
+            android:background="@drawable/border"
+            android:gravity="center_vertical"
+            android:hint="@string/standby_pay_money_hine"
+            android:maxLines="1"
+            android:inputType="number"
+            android:layout_height="40dp"
+            android:padding="@dimen/item_spacing5"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/content3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/text_little_padding" >
+
+        <TextView
+            android:id="@+id/tv_standby_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:textColor="@color/black"
+            android:paddingRight="10dp"
+            android:text="@string/sth_returnMoney_pay"
+            android:textSize="@dimen/str_defaul_24" />
+
+        <EditText
+            android:id="@+id/ed_returnMoney"
+            style="@style/base_width_match"
+            android:background="@drawable/border"
+            android:gravity="center_vertical"
+            android:hint="@string/standby_return_money_hine"
+            android:maxLines="1"
+            android:inputType="number"
+            android:layout_height="40dp"
+            android:padding="@dimen/item_spacing5"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_bottom_custom_dialog"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/text_little_padding"
+            android:layout_marginRight="@dimen/text_little_padding"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_green"
+            android:padding="@dimen/item_spacing10"
+            android:text="@string/common_sure"
+            android:textSize="@dimen/str_defaul_18"
+            android:textColor="@color/common_white" />
+    </LinearLayout>
+
+</LinearLayout>

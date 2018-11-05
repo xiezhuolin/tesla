@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/transparent">
+
+    <TextView
+        android:id="@+id/tv_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/item_spacing10"
+        android:text="111111"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/str_defaul_20"/>
+
+</RelativeLayout>

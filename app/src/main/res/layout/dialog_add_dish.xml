@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rel_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/app_main_bg_gray"
+            >
+
+            <TextView
+                android:id="@+id/tv_dishName_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/circle_ico"
+                android:padding="@dimen/item_spacing8"
+                android:text="@string/sth_dishName"
+                android:textColor="@color/app_text_color"
+                android:textSize="@dimen/str_defaul_16"/>
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/item_spacing15"
+                android:src="@mipmap/img_order_close"/>
+        </RelativeLayout>
+        <cn.acewill.pos.next.widget.ScrolListView
+            android:id="@+id/lv_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dip"
+            android:footerDividersEnabled="true"
+            />
+
+        <EditText
+            android:id="@+id/ed_note"
+            style="@style/setting_edidtext_style"
+            android:layout_margin="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing5"
+            android:hint="@string/sth_note_hine"
+            android:textColorHint="@color/gray"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_minus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/item_spacing15"
+                android:background="@drawable/btn_minus_dish_bg"
+                android:padding="@dimen/item_spacing10"/>
+
+            <TextView
+                android:id="@+id/tv_copies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="@dimen/item_spacing20"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/str_defaul_18"/>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing15"
+                android:background="@drawable/btn_add_dish_bg"
+                android:padding="@dimen/item_spacing10"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing45"
+            android:layout_margin="@dimen/item_spacing10"
+            android:layout_marginBottom="@dimen/item_spacing5"
+            android:layout_marginTop="@dimen/item_spacing15"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_clean_bg"
+                android:gravity="center"
+                android:text="@string/common_cancel"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/str_defaul_15"
+                />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:layout_weight="1"
+                android:background="@drawable/btn_check_out_bg"
+                android:gravity="center"
+                android:text="@string/common_sure"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_15"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

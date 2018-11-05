@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp20"
+        android:paddingBottom="@dimen/dp20"
+        android:text="@string/item"
+        android:textColor="@color/order_day_font_darkgray"
+        android:textSize="@dimen/str_defaul_20"
+        />
+
+    <TextView
+        android:id="@+id/tv_dishName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dp20"
+        android:paddingBottom="@dimen/dp20"
+        android:text="@string/dish_name"
+        android:textColor="@color/order_day_font_darkgray"
+        android:textSize="@dimen/str_defaul_20"
+        />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp20"
+        android:paddingBottom="@dimen/dp20"
+        android:text="@string/inventory_quantity"
+        android:textColor="@color/order_day_font_darkgray"
+        android:textSize="@dimen/str_defaul_20"
+        />
+
+    <TextView
+        android:id="@+id/tv_danger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp20"
+        android:paddingBottom="@dimen/dp20"
+        android:text="@string/waarning_value"
+        android:textColor="@color/order_day_font_darkgray"
+        android:textSize="@dimen/str_defaul_20"
+        />
+
+</LinearLayout>

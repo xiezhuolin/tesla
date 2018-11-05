@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    android:id="@+id/item_rel"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/item_alltable_tv1"
+            style="@style/base_both_wrap"
+            android:layout_weight="1"
+            android:text="@string/ct_dd"
+            android:textColor="@color/common_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_alltable_tv2"
+            style="@style/base_both_wrap"
+            android:text="4/8"
+            android:textColor="@color/common_black"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <ImageView
+            android:id="@+id/item_alltable_img1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/text_normal_padding2"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_original" />
+          <TextView
+            android:id="@+id/item_alltable_state"
+            style="@style/base_both_wrap"
+            android:text="空桌"
+            android:visibility="gone"
+            android:textSize="@dimen/str_defaul_20"
+            android:layout_centerInParent="true"
+            android:textColor="@color/common_black" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/item_alltable_tv3"
+            style="@style/base_both_wrap"
+            android:layout_weight="1"
+            android:text="12:00"
+            android:textSize="12sp"
+            android:textColor="@color/common_black" />
+
+        <TextView
+            android:id="@+id/item_alltable_tv4"
+            style="@style/base_both_wrap"
+            android:text="￥62.00"
+            android:textSize="12sp"
+            android:textColor="@color/common_black" />
+    </LinearLayout>
+
+</RelativeLayout>

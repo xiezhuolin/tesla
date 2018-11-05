@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@drawable/shape_bg_app_green"
+              android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_manager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/item_spacing10"
+        android:text="1111111"
+        android:textColor="@color/white"
+        android:textSize="@dimen/str_defaul_40" />
+
+</LinearLayout>

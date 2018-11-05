@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/lin_left"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_spacing10"
+        android:background="@drawable/border_right_angle"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/grid_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_spacing5"
+            android:background="@color/white"
+            android:horizontalSpacing="@dimen/item_spacing10"
+            android:listSelector="@color/transparent"
+            android:numColumns="3"
+            android:padding="@dimen/item_spacing5"
+            android:scrollbars="none"
+            android:verticalSpacing="@dimen/item_spacing10" >
+        </GridView>
+
+        <cn.acewill.pos.next.widget.SegmentedRadioGroup
+            android:id="@+id/segment_show_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:checkedButton="@+id/button_one"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/button_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_spacing60"
+                android:minWidth="@dimen/item_spacing80"
+                android:text="左对齐"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:textSize="@dimen/str_defaul_20" />
+
+            <RadioButton
+                android:id="@+id/button_center"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="@dimen/item_spacing60"
+                android:minWidth="@dimen/item_spacing80"
+                android:text="居中"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:textSize="@dimen/str_defaul_20" />
+
+            <RadioButton
+                android:id="@+id/button_right"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="@dimen/item_spacing60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/item_spacing80"
+                android:text="右对齐"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:textSize="@dimen/str_defaul_20" />
+        </cn.acewill.pos.next.widget.SegmentedRadioGroup>
+
+        <cn.acewill.pos.next.widget.SegmentedRadioGroup
+            android:id="@+id/segment_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:checkedButton="@+id/button_one"
+            android:orientation="horizontal"
+            android:paddingTop="10dp" >
+
+            <RadioButton
+                android:id="@id/button_one"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_spacing60"
+                android:minWidth="@dimen/item_spacing80"
+                android:text="正常"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:textSize="@dimen/str_defaul_20" />
+
+            <RadioButton
+                android:id="@+id/button_two"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_spacing60"
+                android:minWidth="@dimen/item_spacing80"
+                android:text="双倍"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:textSize="@dimen/str_defaul_20" />
+
+            <RadioButton
+                android:id="@+id/button_there"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="@dimen/item_spacing60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/item_spacing80"
+                android:text="三倍"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:textSize="@dimen/str_defaul_20" />
+        </cn.acewill.pos.next.widget.SegmentedRadioGroup>
+
+        <cn.acewill.pos.next.widget.SegmentedRadioGroup
+            android:id="@+id/segment_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:checkedButton="@+id/button_one"
+            android:orientation="horizontal"
+            android:paddingTop="10dp" >
+
+            <RadioButton
+                android:id="@+id/button_nomer"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_spacing60"
+                android:minWidth="@dimen/item_spacing80"
+                android:text="常体"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:textSize="@dimen/str_defaul_20" />
+
+            <RadioButton
+                android:id="@+id/button_bold"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="@dimen/item_spacing60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/item_spacing80"
+                android:text="加粗"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/radio_colors"
+                android:textSize="@dimen/str_defaul_20" />
+        </cn.acewill.pos.next.widget.SegmentedRadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/item_spacing10"
+        android:layout_toRightOf="@+id/lin_left"
+        android:background="@drawable/border_right_angle" >
+
+        <cn.acewill.pos.next.widget.DragListView
+            android:id="@+id/other_drag_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="#e5e5e5"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:listSelector="#00000000" />
+    </LinearLayout>
+
+</RelativeLayout>

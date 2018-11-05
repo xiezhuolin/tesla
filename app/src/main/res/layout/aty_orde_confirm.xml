@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:background="@color/img_bg"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                style="@style/sty_linerlayout"
+                android:layout_marginTop="@dimen/item_spacing5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/text_normal_padding"
+                android:paddingRight="@dimen/text_normal_padding" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/order_type_zh"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_16" />
+
+                <TextView
+                    android:id="@+id/table_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/font_blue"
+                    android:textSize="@dimen/str_defaul_16" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/order_lv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/item_spacing5"
+                android:layout_marginBottom="@dimen/item_spacing60"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:listSelector="#00000000"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View style="@style/sty_line" />
+
+        <LinearLayout
+            style="@style/sty_linerlayout"
+            android:layout_height="@dimen/item_spacing60"
+            android:background="@color/bg_gray"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/text_normal_padding" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_total"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_18"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/order_allmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥0.00"
+                    android:textColor="@color/font_blue"
+                    android:textSize="@dimen/str_defaul_18"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/order_sub"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.3"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:text="@string/order_type_qrxd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_16"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

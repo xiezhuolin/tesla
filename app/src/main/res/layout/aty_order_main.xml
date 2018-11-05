@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_main_bg_gray"
+              android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/tabs"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/main_home_tab_bg"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/item_spacing10"
+            android:layout_gravity="center"
+            android:src="@mipmap/img_main_logo"/>
+
+        <RadioButton
+            android:id="@+id/tab_table"
+            style="@style/main_tab_style"
+            android:button="@null"
+            android:checked="true"
+            android:visibility="gone"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/ct_table"
+            />
+
+        <RadioButton
+            android:id="@+id/tab_new_order"
+            style="@style/main_tab_style"
+            android:button="@null"
+            android:visibility="gone"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/ct_new_order"
+            />
+
+
+        <RadioButton
+            android:id="@+id/tab_manager"
+            style="@style/main_tab_style"
+            android:button="@null"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/ct_manager"
+            />
+
+        <RadioButton
+            android:id="@+id/tab_reports"
+            style="@style/main_tab_style"
+            android:button="@null"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/ct_reports"
+            />
+
+        <RadioButton
+            android:id="@+id/tab_today_order"
+            style="@style/main_tab_style"
+            android:button="@null"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/ct_today_order"
+            />
+
+        <RadioButton
+            android:id="@+id/tab_retreatDish"
+            style="@style/main_tab_style"
+            android:button="@null"
+            android:visibility="gone"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/ct_retreat"
+            />
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/rel_context"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/img_main_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/item_spacing15"
+                android:visibility="gone"
+                android:src="@mipmap/img_main_exit"/>
+
+            <View
+                android:id="@+id/view_line_1"
+                android:layout_width="@dimen/item_spacing0.5"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/img_main_exit"
+                android:visibility="gone"
+                android:background="@color/app_line_gray_color"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_title_droplist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/item_spacing10"
+                android:paddingRight="@dimen/item_spacing10">
+
+               <cn.acewill.pos.next.widget.CircleImageView
+                    android:id="@+id/circle_ico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/circle_ico"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:paddingRight="@dimen/item_spacing10"
+                    android:paddingBottom="@dimen/item_spacing3"
+                    android:text="@string/app_name"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <ImageView
+                    android:id="@+id/img_arrow_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_userName"
+                    android:src="@mipmap/img_arrow_bttom"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line_2"
+                android:layout_width="@dimen/item_spacing0.5"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/rel_title_droplist"
+                android:background="@color/app_line_gray_color"/>
+            <RelativeLayout
+                android:id="@+id/rel_tip"
+                android:layout_width="wrap_content"
+                android:layout_toLeftOf="@+id/view_line_2"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_main_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/item_spacing15"
+                android:src="@mipmap/img_main_tips"/>
+            </RelativeLayout>
+            <View
+                android:id="@+id/view_line_3"
+                android:layout_width="@dimen/item_spacing0.5"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/rel_tip"
+                android:background="@color/app_line_gray_color"/>
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/view_line_3"
+                android:gravity="left"
+                android:padding="@dimen/item_spacing8"
+                android:textColor="@color/app_text_price_color"
+                android:textSize="@dimen/str_defaul_16"/>
+
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/tv_tips"
+                android:gravity="left"
+                android:padding="@dimen/item_spacing8"
+                android:text="2016年8月16日 周六 10:13"
+                android:textColor="@color/app_text_color"
+                android:textSize="@dimen/str_defaul_16"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing0.5"
+            android:layout_toLeftOf="@+id/img_main_exit"
+            android:background="@color/app_line_gray_color"/>
+
+        <RelativeLayout
+            android:id="@+id/rel_tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

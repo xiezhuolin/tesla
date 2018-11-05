@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pay_type_rl"
+    android:orientation="vertical" android:layout_width="@dimen/item_spacing120"
+    android:layout_height="@dimen/item_spacing120"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/pay_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/sth_money"
+        android:gravity="center"
+        android:textSize="@dimen/pay_type_font"
+        android:background="@drawable/pay_type_selector"
+        android:layout_marginTop="@dimen/item_spacing15"
+        android:layout_marginRight="@dimen/item_spacing15"
+        android:layout_marginLeft="@dimen/item_spacing3"
+        android:layout_marginBottom="@dimen/item_spacing15"
+        android:textColor="@color/pay_type_colors"
+        />
+    <ImageView
+        android:id="@+id/pay_select_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pay_icon_selector"
+        android:layout_marginTop="@dimen/item_spacing5"
+        android:layout_marginRight="@dimen/item_spacing5"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

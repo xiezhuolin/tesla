@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/border"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:background="@color/white_order_title"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/item_spacing3"
+        android:paddingLeft="@dimen/item_spacing15">
+
+        <TextView
+            android:id="@+id/print_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="12121"
+            android:textColor="@color/app_title_bg"
+            android:textSize="@dimen/str_defaul_24"/>
+
+        <LinearLayout
+            android:id="@+id/print_close_ll"
+            android:layout_width="@dimen/item_spacing50"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/item_spacing15">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:src="@mipmap/close"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/sty_line"/>
+
+
+    <TextView
+        android:id="@+id/tv_modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/item_spacing15"
+        android:text="修改"
+        android:textColor="@color/black"
+        android:textSize="@dimen/str_defaul_22"/>
+
+    <View style="@style/sty_line"/>
+    <TextView
+    android:id="@+id/tv_delete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="@dimen/item_spacing15"
+    android:text="删除"
+    android:textColor="@color/black"
+    android:textSize="@dimen/str_defaul_22"/>
+    <View style="@style/sty_line"/>
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/item_spacing15"
+        android:text="启用"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="@dimen/str_defaul_22"/>
+    <View style="@style/sty_line"
+          android:visibility="gone"/>
+
+</LinearLayout>

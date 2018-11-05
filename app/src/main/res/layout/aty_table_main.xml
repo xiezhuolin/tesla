@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="@dimen/item_spacing70">
+
+        <TextView
+            android:id="@+id/tv_dishmenu"
+            style="@style/table_title_white"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:drawableLeft="@mipmap/img_main_dishmenu"
+            android:text="@string/sth_home_dishmenu"/>
+
+        <TextView
+            android:id="@+id/tv_orderdish"
+            style="@style/table_title_white"
+            android:paddingLeft="@dimen/item_spacing20"
+            android:layout_toRightOf="@+id/tv_dishmenu"
+            android:drawableLeft="@mipmap/img_main_orderdish"
+            android:text="@string/sth_home_orderdish"/>
+
+        <TextView
+            android:id="@+id/tv_order"
+            style="@style/table_title_white"
+            android:paddingLeft="@dimen/item_spacing20"
+            android:layout_toRightOf="@+id/tv_orderdish"
+            android:drawableLeft="@mipmap/img_main_order"
+            android:text="@string/sth_home_order"/>
+
+        <TextView
+            android:id="@+id/tv_main_title"
+            style="@style/table_title_white"
+            android:textSize="@dimen/str_defaul_30"
+            android:layout_centerHorizontal="true"
+            android:text="智慧快餐"/>
+
+        <TextView
+            android:id="@+id/tv_setting"
+            style="@style/table_title_white"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/item_spacing20"
+            android:drawableLeft="@mipmap/img_main_setting"
+            android:text="@string/sth_home_setting"/>
+
+        <TextView
+            android:id="@+id/tv_reserve"
+            style="@style/table_title_white"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:layout_toLeftOf="@+id/tv_setting"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:drawableLeft="@mipmap/img_main_reserve"
+            android:text="@string/sth_home_reserve"/>
+    </RelativeLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/myProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="5dip"
+        android:minHeight="5dip"
+        android:paddingRight="5dp"
+        android:progressDrawable="@drawable/seek_drawable"
+        />
+    <WebView
+        android:id="@+id/table_wv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"/>
+
+</LinearLayout>

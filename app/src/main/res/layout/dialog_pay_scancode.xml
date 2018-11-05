@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/item_spacing3"
+        android:background="@color/white_order_title"
+        >
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/scan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/wating_pay"
+            android:textColor="@color/bbutton_info"
+            app:textSize="25" />
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/scan_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/item_spacing15"
+            android:paddingLeft="@dimen/item_spacing30"
+            android:gravity="center"
+            android:text="@string/close"
+            android:textColor="@color/bbutton_info"
+            app:textSize="25" />
+    </RelativeLayout>
+    <View style="@style/sty_line"/>
+
+    <cn.acewill.pos.next.widget.ComTextView
+        android:id="@+id/scan_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_spacing30"
+        android:layout_marginBottom="@dimen/item_spacing30"
+        android:gravity="center"
+        android:text="@string/wating_pay_wat"
+        android:textColor="@color/creat_btn_select"
+        app:textSize="23" />
+
+    <LinearLayout
+        android:id="@+id/retry_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp5"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/creat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/paid"
+            android:gravity="center"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_selector_bright_blue"
+            android:layout_marginRight="@dimen/dp5"
+            />
+        <TextView
+            android:id="@+id/retry"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/common_cancel"
+            android:gravity="center"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_selector_bright_blue"
+            android:layout_marginLeft="@dimen/dp5"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="@dimen/item_spacing10"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/item_spacing10"
+              android:paddingRight="@dimen/item_spacing10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="品牌"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="IP"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="描述"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="小票类型"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="操作"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+    </LinearLayout>
+
+    <View style="@style/sty_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/add_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing70"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/print_add"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_spacing45"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector_blue"
+                android:gravity="center"
+                android:text="添加"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_16" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_p"
+            style="@style/sty_line"
+            android:layout_above="@id/add_ll"/>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/print_srl"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/line_p"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/print_lv"
+                style="@style/listView_style"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <!--<ListView-->
+        <!--android:id="@+id/printList"-->
+        <!--style="@style/listView_style"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_above="@id/line_p"-->
+        <!--/>-->
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+每个接口都会抛两个异常: IOException, PosServiceException
+
+IOException: 跟业务无关的异常，比如与服务器的网络不通，服务器超时等等.
+PosServiceException: 跟业务相关的异常，比如登录时用户名和密码不匹配，比如创建订单时桌台已经被占用等等。具体错误请通过PosServiceException的errorCode获取。
+errorCode是服务器定义的错误码，APP端需要根据定义本地的错误描述文件来跟这些errorCode对应起来。

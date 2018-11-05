@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@drawable/border"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/dp15"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:layout_margin="@dimen/item_spacing3"
+        android:background="@color/white_order_title"
+        android:focusableInTouchMode="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/dialog_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/dialog_transparent_pressed"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/common_back"
+            android:textColor="@color/red"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/item_spacing10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_26"/>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            style="@style/dialog_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dialog_transparent_pressed"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/common_sure"
+            android:textColor="@color/blue_table_nomber_title"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing0.5"
+        android:background="@color/gray"/>
+    <ListView
+        android:id="@+id/lv_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:scrollbars="none"
+        android:divider="@color/gray_1"
+        android:dividerHeight="@dimen/dp0.5"
+        android:footerDividersEnabled="true"
+        android:transcriptMode="normal"
+        />
+</LinearLayout>

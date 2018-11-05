@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/order_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:background="@drawable/layout_selector_gray"
+        >
+        <TextView
+            android:id="@+id/standby_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/use_date"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp20"
+            />
+        <TextView
+            android:id="@+id/standby_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/user"
+            android:gravity="center"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp20"
+            />
+        >
+        <TextView
+            android:id="@+id/standby_from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/use"
+            android:gravity="center"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp20"
+            />
+        <TextView
+            android:id="@+id/standby_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/money"
+            android:gravity="right|center_vertical"
+            android:paddingTop="@dimen/dp2"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp20" />
+
+    </LinearLayout>
+    <View
+        style="@style/sty_line"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"/>
+
+</LinearLayout>

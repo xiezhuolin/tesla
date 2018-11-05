@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="etName_1" type="id">etName_1</item>
+    <item name="etName_2" type="id">etName_2</item>
+    <item name="etName_3" type="id">etName_3</item>
+    <item name="etName_4" type="id">etName_4</item>
+    <item name="etName_5" type="id">etName_5</item>
+    <item name="etName_6" type="id">etName_6</item>
+    <item name="etName_7" type="id">etName_7</item>
+    <item name="etName_8" type="id">etName_8</item>
+    <item name="etName_9" type="id">etName_9</item>
+    <item name="etName_10" type="id">etName_10</item>
+</resources>

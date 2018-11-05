@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_right_angle"
+        android:padding="@dimen/item_spacing1">
+
+        <ImageView
+            android:id="@+id/iv_dishImagePath"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lin_sole_out"
+                android:layout_width="match_parent"
+                android:layout_weight="6"
+                android:visibility="invisible"
+                android:background="@color/half_trans_gray"
+                android:layout_height="0dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="@string/sold_out"
+                    android:paddingTop="@dimen/dp3"
+                    android:padding="@dimen/item_spacing3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_22"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:background="@color/half_trans_gray"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_dishName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="11111"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_20"/>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="38.00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_16"/>
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_order_title">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_spacing50"
+    android:orientation="horizontal"
+    android:id="@+id/lin_top"
+    android:layout_marginTop="@dimen/item_spacing10"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="打印机名称"
+        android:textColor="@color/order_day_font_darkgray"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/item_spacing10"
+        android:textSize="@dimen/sp14"/>
+    <cn.acewill.pos.next.widget.CommonEditText
+        android:id="@+id/sale_money"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/item_spacing10"
+        android:background="@drawable/bg_edit_text"
+        android:hint="设置打印机名称"
+        android:paddingLeft="@dimen/item_spacing10"
+        android:textSize="@dimen/sp14"
+        android:textColorHint="@color/login_gray"
+        />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lin_top"
+        android:layout_marginTop="@dimen/item_spacing10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="打印机高度"
+            android:textColor="@color/order_day_font_darkgray"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:textSize="@dimen/sp14"/>
+        <cn.acewill.pos.next.widget.CommonEditText
+            android:id="@+id/print_height"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/item_spacing10"
+            android:background="@drawable/bg_edit_text"
+            android:hint="设置打印机纸高度"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:textSize="@dimen/sp14"
+            android:textColorHint="@color/login_gray"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/save_btn"
+        android:layout_width="@dimen/item_spacing200"
+        android:layout_height="@dimen/item_spacing50"
+        android:text="保存"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_selector_bright_blue"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/item_spacing15"
+        />
+</RelativeLayout>

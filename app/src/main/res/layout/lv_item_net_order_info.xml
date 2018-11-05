@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:layout_margin="@dimen/dp3"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        >
+
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/dish_name"
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/ct_cp"
+            app:setHeight="false"
+            app:textSize="25"
+            />
+
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/dish_count"
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/dish_price_count"
+            app:setHeight="false"
+            app:textSize="25"
+            />
+
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/dish_price"
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0.00"
+            app:setHeight="false"
+            app:textSize="25"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dish_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_spacing5"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:visibility="gone"
+        android:paddingBottom="@dimen/dp5"
+        android:textColor="@color/creat_btn_select"
+        android:textSize="@dimen/str_defaul_20"
+        />
+</LinearLayout>

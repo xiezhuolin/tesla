@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/border"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing70"
+        android:layout_margin="@dimen/item_spacing3"
+        android:background="@color/white_order_title"
+        android:focusableInTouchMode="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/dialog_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/dialog_transparent_pressed"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/common_back"
+            android:textColor="@color/red"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/sth_change_account_title"
+            android:padding="@dimen/item_spacing10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_30"/>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            style="@style/dialog_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dialog_transparent_pressed"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/common_sure"
+            android:textColor="@color/blue_table_nomber_title"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing0.5"
+        android:background="@color/gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/item_spacing20">
+
+        <TextView
+            android:id="@+id/tv_customrerName"
+            style="@style/dialog_text_style"
+            android:padding="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:text="@string/sth_customer_name"
+            />
+
+        <EditText
+            android:id="@+id/ed_customrerName"
+            style="@style/ed_style"
+            android:hint="@string/sth_customer_name_hine"
+            android:layout_toRightOf="@+id/tv_customrerName"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            />
+
+        <TextView
+            android:id="@+id/tv_member_number"
+            style="@style/dialog_text_style"
+            android:padding="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:text="@string/sth_menber_number"
+            android:layout_below="@+id/tv_customrerName"
+            />
+
+        <EditText
+            android:id="@+id/ed_member_number"
+            style="@style/ed_style"
+            android:layout_below="@+id/tv_customrerName"
+            android:layout_toRightOf="@+id/tv_member_number"
+            android:hint="@string/sth_member_number_hine"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            />
+        <TextView
+            android:id="@+id/tv_note"
+            style="@style/dialog_text_style"
+            android:padding="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:text="@string/sth_note"
+            android:layout_below="@+id/tv_member_number"
+            />
+
+        <EditText
+            android:id="@+id/ed_note"
+            style="@style/ed_style"
+            android:layout_height="80dp"
+            android:layout_below="@+id/ed_member_number"
+            android:layout_toRightOf="@+id/tv_note"
+            android:gravity="left|top"
+            android:hint="@string/sth_note_info_hine"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:maxLines="5"
+            />
+
+        <TextView
+            android:id="@+id/tv_time_hint"
+            style="@style/dialog_text_style"
+            android:padding="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:text="@string/sth_time"
+            android:layout_below="@+id/ed_note"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ed_note"
+            android:layout_toRightOf="@+id/tv_time_hint"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:layout_height="@dimen/item_spacing50">
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/ed_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/str_defaul_24"
+                android:gravity="center"
+                android:paddingRight="@dimen/item_spacing20"
+                android:hint="@string/sth_date_hine"
+                android:drawablePadding="@dimen/item_spacing10"
+                android:drawableRight="@mipmap/image_arrow"
+                />
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/ed_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="@string/sth_time_hine"
+                android:textSize="@dimen/str_defaul_24"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:paddingRight="@dimen/item_spacing20"
+                android:drawablePadding="@dimen/item_spacing10"
+                android:drawableRight="@mipmap/image_arrow"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_person"
+            style="@style/dialog_text_style"
+            android:padding="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:text="@string/sth_set_remind"
+            android:layout_below="@+id/tv_time_hint"
+            />
+
+        <CheckBox
+            android:id="@+id/ck_select_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing15"
+            android:layout_below="@+id/tv_time_hint"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_ck_area"
+            android:button="@android:color/transparent"
+            android:checked="false" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/ed_person"
+            android:layout_height="@dimen/item_spacing10"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

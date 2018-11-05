@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="cn.acewill.pos"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.MEDIA_MOUNTED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.hardware.usb.host"/>
+    <uses-permission android:name="android.permission.MANAGE_NEWLAND"/>
+    <uses-permission android:name="android.permission.MANAGE_NEWLANDUART3"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 允许访问振动设备 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 允许使用相机 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <!-- 相机自动聚焦 -->
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 屏幕保持唤醒，不锁屏的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 开机自启服务权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+
+
+    <application
+        android:name="cn.acewill.pos.next.config.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/pos_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <service android:name="cn.acewill.pos.next.service.LogService"/>
+
+        <activity
+            android:name=".next.ui.activity.LoginAty"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 登录界面 -->
+        <activity
+            android:name=".next.ui.activity.WelcomeAty"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 设置界面 -->
+        <activity
+            android:name=".next.ui.activity.SettingsAty"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 主界面 -->
+        <!-- 确认订单 -->
+        <activity
+            android:name=".next.ui.activity.CheckOutAty"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 套餐 -->
+        <activity
+            android:name=".next.ui.activity.PackagerAty"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 小票设置界面 -->
+        <activity
+            android:name=".next.ui.activity.OrderReceiptsSettAty"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 小票选择类型界面 -->
+        <activity
+            android:name=".next.ui.activity.ReceiptsTypeAty"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 网上订单下单界面 -->
+        <activity
+            android:name=".next.ui.activity.NetOrderAty"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"/>
+
+
+        <!-- 桌台点餐界面 -->
+        <activity
+            android:name=".next.ui.activity.SetTableActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!-- 桌台退菜界面 -->
+
+        <!-- 桌台界面 -->
+        <!-- 桌台点菜界面 -->
+        <activity
+            android:name=".next.ui.activity.OrderDishAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!-- 桌台搜索点菜界面 -->
+        <activity
+            android:name=".next.ui.activity.SearchAty"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!-- 订单 -->
+        <activity
+            android:name=".next.ui.activity.OrderInfoAty"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!-- 订单详细信息 -->
+        <activity
+            android:name=".next.ui.activity.OrderDetailAty"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!-- 订单主界面 -->
+        <activity
+            android:name=".next.ui.activity.newPos.TableMainAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!-- 上传日志界面 -->
+        <activity
+            android:name=".next.ui.activity.newPos.UpLoadActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog2"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <!-- 打印机出错界面 -->
+        <activity
+            android:name=".next.ui.activity.newPos.ErrPrinteAty"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 菜品沽清界面 -->
+        <activity
+            android:name=".next.ui.activity.newPos.DishCountAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.DishCountNewAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.TableOrderNewAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.OrderDishMainAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.AddDishAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.MessAgeAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.MemberAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog2"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.StaffAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog2"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.StaffInfoAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.StandByCashAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog2"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.CreateStandByCashAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog2"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.ManageSetAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.PrinterInfoAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.KDSAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.ReportAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.FetchOrderAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.KitchenStallAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.ModifiPwAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            >
+        </activity>
+        <activity
+            android:name=".next.ui.activity.newPos.WorkShiftHistoryAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.DishMenuAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.DishItemAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.DishItemInfoAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.NetOrderNewAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.DishMenuSettAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.ShowReportAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.WorkShiftReportAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.CallGoodsAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.DishCountSettAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.OrderAmountAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.OrderInfoHistoryAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.ErrTipsAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/setmeal_dialog2"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.newPos.CardRecordsAty"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".next.ui.activity.ImageSliderAty"
+            android:screenOrientation="landscape">
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.MAIN"/>
+
+                 <category android:name="android.intent.category.LAUNCHER"/>
+             </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".next.ui.activity.CheckOutNewAty"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".next.ui.activity.newPos.AboutAty"
+            android:screenOrientation="landscape"/>
+
+        <!--商米副屏-->
+        <receiver android:name="sunmi.ds.MsgReceiver">
+            <intent-filter>
+                <action android:name="com.sunmi.hcservice"/>
+                <action android:name="com.sunmi.hcservice.status"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.gprinter.service.GpPrintService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="GpPrintService"
+            android:process=":remote"
+            >
+            <intent-filter>
+                <action android:name="com.gprinter.aidl.GpPrintService"/>
+            </intent-filter>
+        </service>
+        <service android:name=".next.service.UpLoadOrderService"></service>
+
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57e893dfe0f55ac696000e0a"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="pos"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+    </application>
+
+</manifest>

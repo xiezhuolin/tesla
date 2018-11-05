@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing70"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/rel_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:paddingRight="@dimen/item_spacing10"
+            >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/btn_back"
+                android:paddingRight="5dp"/>
+
+            <TextView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_back"
+                android:background="@color/transparent"
+                android:paddingTop="1dp"
+                android:paddingLeft="@dimen/item_spacing5"
+                android:text="@string/common_back"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_24"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="@string/table_edit"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_26"/>
+
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"/>
+</LinearLayout>

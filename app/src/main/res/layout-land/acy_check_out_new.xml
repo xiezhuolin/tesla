@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_dark_check"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/back_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_spacing10">
+
+            <cn.acewill.pos.next.widget.ComTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/back_left_white"
+                android:paddingBottom="@dimen/item_spacing15"
+                android:paddingTop="@dimen/item_spacing15"/>
+
+            <cn.acewill.pos.next.widget.ComTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:gravity="center_vertical"
+                android:text="@string/common_back"
+                android:textColor="@color/white"
+                app:textSize="30"/>
+        </LinearLayout>
+
+        <cn.acewill.pos.next.widget.ComTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/sth_checkOut"
+            android:textColor="@color/white"
+            app:textSize="35"/>
+
+        <LinearLayout
+            android:id="@+id/moneybox_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/item_spacing20"
+            android:visibility="gone">
+
+            <cn.acewill.pos.next.widget.ComTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/item_spacing10"
+                android:drawableLeft="@mipmap/money_box"/>
+
+            <cn.acewill.pos.next.widget.ComTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/sth_home_check_box"
+                android:textColor="@color/white"
+                app:textSize="30"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!--左侧菜单-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/lin_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/advance_checkout_btn"
+                    style="@style/check_out_text"
+                    android:layout_height="@dimen/item_spacing50"
+                    android:background="@drawable/pay_btn_press"
+                    android:gravity="center"
+                    android:text="@string/expected_ticket"
+                    android:textColor="@color/white"
+                    app:setHeight="false"
+                    app:textSize="30"/>
+
+                <View
+                    android:id="@+id/section_line"
+                    style="@style/sty_line"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:background="@color/white"
+                    />
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/checkout_btn"
+                    style="@style/check_out_text"
+                    android:layout_height="@dimen/item_spacing50"
+                    android:background="@drawable/pay_btn_press"
+                    android:gravity="center"
+                    android:text="@string/sth_checkOut"
+                    android:textColor="@color/white"
+                    app:setHeight="false"
+                    app:textSize="30"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/lin_bottom"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        style="@style/check_out_text"
+                        android:background="@color/blue_table_nomber_title"
+                        android:paddingLeft="@dimen/item_spacing15"
+                        android:text="@string/price_option"
+                        android:textColor="@color/white"/>
+
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/service_btn"
+                        style="@style/check_out_text"
+                        android:background="@drawable/layout_selector_gray"
+                        android:paddingLeft="@dimen/item_spacing15"
+                        android:text="@string/service_charge"
+                        android:visibility="gone"
+                        app:textSize="25"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/discount_btn"
+                        style="@style/check_out_text"
+                        android:background="@drawable/layout_selector_gray"
+                        android:paddingLeft="@dimen/item_spacing15"
+                        android:text="@string/all_discounts"
+                        app:textSize="25"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/remark_btn"
+                        style="@style/check_out_text"
+                        android:background="@drawable/layout_selector_gray"
+                        android:paddingLeft="@dimen/item_spacing15"
+                        android:text="@string/sth_note2"
+                        app:textSize="25"/>
+
+                    <View style="@style/sty_line"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        style="@style/check_out_text"
+                        android:background="@color/blue_table_nomber_title"
+                        android:paddingLeft="@dimen/item_spacing15"
+                        android:text="@string/payment_options"
+                        android:textColor="@color/white"/>
+
+
+                    <cn.acewill.pos.next.widget.ScrolListView
+                        android:id="@+id/paytype_lv"
+                        style="@style/listView_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        style="@style/check_out_text"
+                        android:background="@color/layout_gray"
+                        android:paddingLeft="@dimen/item_spacing15"
+                        android:text="@string/ticket_set"
+                        android:visibility="gone"/>
+
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/print_btn"
+                        style="@style/check_out_text"
+                        android:background="@drawable/layout_selector_gray"
+                        android:paddingLeft="@dimen/item_spacing15"
+                        android:text="@string/select_printer"
+                        android:visibility="gone"/>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+        <!--右侧小票-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.7"
+            android:background="@drawable/repeat_bg"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"/>
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/item_spacing15"
+                    android:paddingRight="@dimen/item_spacing15">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/item_spacing10"
+                        android:src="@mipmap/logo"
+                        android:visibility="gone"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/ticket_title"
+                        style="@style/check_out_tickt_text"
+                        android:layout_marginTop="@dimen/item_spacing20"
+                        android:text="@string/welcome"
+                        android:textStyle="italic"
+                        app:setHeight="false"
+                        app:textSize="32"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/ticket_table"
+                        style="@style/check_out_text"
+                        android:layout_marginTop="@dimen/item_spacing5"
+                        android:text="@string/take_meals_number_xx"
+                        android:textStyle="bold"
+                        app:setHeight="false"
+                        app:textSize="35"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/ticket_time"
+                        style="@style/check_out_tickt_text"
+                        android:text="@string/order_time"
+                        app:setHeight="false"
+                        app:textSize="22"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/ticket_ordernum"
+                        style="@style/check_out_tickt_text"
+                        android:text="@string/order_number"
+                        app:setHeight="false"
+                        app:textSize="22"/>
+
+                    <cn.acewill.pos.next.widget.ComTextView
+                        android:id="@+id/ticket_cashier"
+                        style="@style/check_out_tickt_text"
+                        android:text="@string/order_cashier"
+                        app:setHeight="false"
+                        app:textSize="22"/>
+
+                    <View
+                        style="@style/sty_line"
+                        android:layout_marginTop="@dimen/item_spacing10"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_spacing5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:text="@string/ct_cp"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:gravity="center"
+                            android:text="@string/sth_dishSum"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/sth_dishPrice"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/sty_line"
+                        android:layout_marginTop="@dimen/item_spacing10"
+                        />
+
+                    <cn.acewill.pos.next.widget.ScrolListView
+                        android:id="@+id/order_item_lv"
+                        style="@style/listView_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <View
+                        style="@style/sty_line"
+                        android:layout_marginTop="@dimen/item_spacing5"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_spacing10"
+                        android:orientation="horizontal">
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/subtotal"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            android:id="@+id/ticket_subtotal"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:text="0.00￥"
+                            android:textStyle="bold"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/service_charge"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            android:id="@+id/ticket_service"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:text="0.00￥"
+                            android:textStyle="bold"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/price_prefer"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            android:id="@+id/ticket_discount"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:text="0.00￥"
+                            android:textStyle="bold"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/sth_returnMoney"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            android:id="@+id/ticket_change"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:text="0.00￥"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/price_total"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            android:id="@+id/ticket_total"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:text="0.00￥"
+                            android:textStyle="bold"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/sty_line"
+                        android:layout_marginTop="@dimen/item_spacing10"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_spacing5"
+                        android:orientation="horizontal">
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            android:id="@+id/ticket_nopay_title"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/unpaid"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+
+                        <cn.acewill.pos.next.widget.ComTextView
+                            android:id="@+id/ticket_nopay_tv"
+                            style="@style/check_out_tickt_text"
+                            android:layout_width="wrap_content"
+                            android:text="0.00￥"
+                            android:textStyle="bold"
+                            app:setHeight="false"
+                            app:textSize="22"/>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/sty_line"
+                        android:layout_marginTop="@dimen/item_spacing10"/>
+
+                    <cn.acewill.pos.next.widget.ScrolListView
+                        android:id="@+id/ticket_paylist"
+                        style="@style/listView_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

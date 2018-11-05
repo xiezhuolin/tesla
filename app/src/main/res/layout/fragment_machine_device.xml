@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_order_title">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/gray_check_sth"
+        android:layout_height="wrap_content">
+        <TextView
+        style="@style/staff_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp15"
+        android:text="系统设置"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="名称"/>
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="奥琦玮西丽店自助1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="屏保时间"/>
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="3秒 10秒 30秒"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="显示购物车"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_time_hint"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_spacing20"
+            android:background="@drawable/selector_ck_area"
+            android:button="@android:color/transparent"
+            android:checked="false"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="会员验证"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_time_hint"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_spacing20"
+            android:background="@drawable/selector_ck_area"
+            android:button="@android:color/transparent"
+            android:checked="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="打印机"/>
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="奥琦玮西丽店自助1"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/staff_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text="请按打印测试页上面的显示内容进行以下两项的相应配置"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="打印机类型"/>
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="＞"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="打印机设置"/>
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="＞"/>
+    </LinearLayout>
+
+</LinearLayout>

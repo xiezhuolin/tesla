@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/login_account_number"/>
+
+            <cn.acewill.pos.next.widget.CommonEditText
+                android:id="@+id/tv_nickName"
+                style="@style/staff_ed_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/input_phone_or_email"
+                android:layout_marginLeft="@dimen/item_spacing20"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/actual_name"/>
+
+            <cn.acewill.pos.next.widget.CommonEditText
+                android:id="@+id/tv_userName"
+                style="@style/staff_ed_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/stand_by_chinese_english"
+                android:layout_marginLeft="@dimen/item_spacing20"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/phone"/>
+
+            <cn.acewill.pos.next.widget.CommonEditText
+                android:id="@+id/tv_phoneNumber"
+                style="@style/staff_ed_style"
+                android:layout_width="0dp"
+                android:inputType="number"
+                android:hint="@string/intput_phone"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_spacing20"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/employee_discounts"/>
+
+            <cn.acewill.pos.next.widget.CommonEditText
+                android:id="@+id/tv_discount"
+                style="@style/staff_ed_style"
+                android:layout_width="0dp"
+                android:hint="@string/input_employee_discounts"
+                android:inputType="number"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_spacing20"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <TextView
+        style="@style/staff_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp15"
+        android:visibility="gone"
+        android:text="修改密码(66666)"/>
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="@dimen/dp15"
+            android:text="查看上班情况"/>
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="@dimen/dp15"
+            android:text="排班安排"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/post"/>
+
+            <TextView
+                android:id="@+id/tv_quartersName"
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="@dimen/dp10"
+                android:text="＞"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_bottom"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="@dimen/dp15"
+            android:background="@color/gray_check_sth"
+            android:text="@string/account_control"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/forced_exit"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/freeze_the_account"/>
+
+            <CheckBox
+                android:id="@+id/ck_user_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

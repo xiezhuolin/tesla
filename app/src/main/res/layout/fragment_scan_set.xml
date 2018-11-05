@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/z_scan_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/item_spacing10"
+            android:background="@drawable/btn_selector_yellow"
+            android:gravity="center"
+            android:orientation="vertical">
+            <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/z_scan_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/positive_scan"
+                android:textColor="@color/order_day_font_darkgray"
+                app:textSize="60"
+                app:setHeight="false"
+                />
+            <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/z_scan_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_spacing5"
+                android:text="@string/pos_create_qrcode"
+                android:textColor="@color/login_gray"
+                app:textSize="20"
+                app:setHeight="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/f_scan_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/item_spacing10"
+            android:background="@drawable/btn_selector_yellow"
+            android:gravity="center"
+            android:orientation="vertical">
+            <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/f_scan_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reverse_scan"
+                android:textColor="@color/order_day_font_darkgray"
+                app:textSize="60"
+                app:setHeight="false"/>
+            <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/f_scan_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_spacing5"
+                android:text="@string/sweep_code_gun_scan_guest"
+                android:textColor="@color/login_gray"
+                app:textSize="20"
+                app:setHeight="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+
+</LinearLayout>

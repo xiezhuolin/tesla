@@ -1,0 +1,465 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_app_bg"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/base_width_match"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv"
+                    style="@style/base_both_wrap"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="@string/setting_id"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <EditText
+                    android:id="@+id/setting_ip"
+                    style="@style/base_width_match"
+                    android:layout_toRightOf="@+id/tv"
+                    android:layout_weight="1.0"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/setting_id_hint"
+                    android:inputType="number|text"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"/>
+
+                <ImageView
+                    android:id="@+id/img_clean_ip"
+                    style="@style/base_both_wrap"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/icon_delete"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <RelativeLayout
+                style="@style/base_width_match"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    style="@style/base_both_wrap"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="@string/setting_port"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <EditText
+                    android:id="@+id/setting_port"
+                    style="@style/base_width_match"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv2"
+                    android:layout_weight="1.0"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/setting_port_hint"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"/>
+
+                <ImageView
+                    android:id="@+id/img_clean_port"
+                    style="@style/base_both_wrap"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/icon_delete"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <RelativeLayout
+                style="@style/base_width_match"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="支持退菜:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:button="@drawable/select_switch_ck"
+                    android:checked="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="是否打印小票:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <CheckBox
+                    android:id="@+id/isPrint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:button="@drawable/select_switch_ck"
+                    android:checked="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="小票打印张数:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <CheckBox
+                    android:id="@+id/one_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_order_type"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing5"
+                    android:text="1张"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_15"/>
+
+                <CheckBox
+                    android:id="@+id/two_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:background="@drawable/selector_order_type"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing5"
+                    android:text="2张"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:padding="5dp"
+                    android:text="小票打印标题:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <EditText
+                    android:id="@+id/setting_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/setting_title_hint"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="支付方式:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <CheckBox
+                    android:id="@+id/scan_z"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_order_type"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing5"
+                    android:text="正扫"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_15"/>
+
+                <CheckBox
+                    android:id="@+id/scan_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:background="@drawable/selector_order_type"
+                    android:button="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing5"
+                    android:text="反扫"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_15"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="测试模式:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <CheckBox
+                    android:id="@+id/isDebug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:button="@drawable/select_switch_ck"
+                    android:checked="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:padding="5dp"
+                    android:text="微信支付PTID:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <EditText
+                    android:id="@+id/wx_ptid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/setting_ptid_hint"
+                    android:maxLength="8"
+                    android:numeric="signed"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:padding="5dp"
+                    android:text="支付宝支付PTID:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <EditText
+                    android:id="@+id/ali_ptid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/setting_ptid_hint"
+                    android:maxLength="8"
+                    android:numeric="signed"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:padding="5dp"
+                    android:text="微信卡券PTID:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <EditText
+                    android:id="@+id/wx_coupon_ptid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/setting_ptid_hint"
+                    android:maxLength="8"
+                    android:numeric="signed"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_app_bg"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/base_both_wrap"
+                    android:padding="5dp"
+                    android:text="支付宝卡券PTID:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_18"/>
+
+                <EditText
+                    android:id="@+id/ali_coupon_ptid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/setting_ptid_hint"
+                    android:maxLength="8"
+                    android:numeric="signed"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/setting_ok"
+                style="@style/buttonStyle_green"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/item_spacing50"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:layout_marginRight="@dimen/item_spacing10"
+                android:layout_marginTop="@dimen/item_spacing20"
+                android:text="@string/common_sure"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

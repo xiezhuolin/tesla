@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:padding="@dimen/dp5"
+              android:id="@+id/lin_count"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/lin_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/order_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="17000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_22"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/order_tableName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xx:A2"
+            android:gravity="center"
+            android:textColor="@color/black_gv_title"
+            android:textSize="@dimen/str_defaul_20"
+            />
+        <TextView
+            android:id="@+id/order_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="wx"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp5"
+            android:paddingTop="@dimen/dp5"
+            android:textColor="@color/black_gv_title"
+            android:textSize="@dimen/str_defaul_20"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/order_eatType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eat_in"
+            android:gravity="center"
+            android:textColor="@color/black_gv_title"
+            android:textSize="@dimen/str_defaul_20"
+            />
+        <TextView
+            android:id="@+id/order_paystate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/paid"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp5"
+            android:textColor="@color/black_gv_title"
+            android:textSize="@dimen/str_defaul_20"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

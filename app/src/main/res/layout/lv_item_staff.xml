@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/order_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:background="@drawable/layout_selector_gray"
+        >
+        <TextView
+            android:id="@+id/staff_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/staff_name"
+            android:gravity="center"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp20"
+            />
+
+        <TextView
+            android:id="@+id/staff_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/staff_number"
+            android:gravity="center"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp20"
+            />
+
+        <TextView
+            android:id="@+id/staff_role"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/staff_positions2"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp2"
+            android:textColor="@color/login_gray"
+            android:textSize="@dimen/sp20" />
+
+    </LinearLayout>
+    <View
+        style="@style/sty_line"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"/>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pay_type_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_standbyCash"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp40"
+        android:paddingRight="@dimen/dp50"
+        android:paddingTop="@dimen/dp20"
+        android:paddingBottom="@dimen/dp20"
+        android:background="@drawable/key_number_gray_selector"
+        android:text="@string/miscellaneous"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp25"/>
+
+</RelativeLayout>

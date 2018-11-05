@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_order_title"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_check_sth">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:padding="@dimen/dp15"
+                android:text="订单处理"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/is_kitchen_ticket_show_dish_money"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_kitchMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/is_receive_net_order"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_netorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_automatic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/is_automatic_receive_net_order"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_automatic_netorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/create_order_is_show_package_name"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_printPackageName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/create_order_is_show_electronic_invoice_qrcode"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_printQrCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/is_create_quick_scan_create_order"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_quickOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/order_management_net_order_priority_display"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_netorder_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/is_summary_receipt_show_kds_call_number"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_summary_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/take_out_order_automatic_receive"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_waiMai_order_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/select_take_out_is_fill_in_guest_info"/>
+
+            <CheckBox
+                android:id="@+id/ck_select_waiMai_guest_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/is_pad_running"/>
+
+            <CheckBox
+                android:id="@+id/ck_is_pad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="false"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/is_create_order_JYJ"/>
+
+            <CheckBox
+                android:id="@+id/ck_is_create_order_jyj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="false"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lin_setTareWeight"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/set_tare"/>
+
+            <TextView
+                android:id="@+id/tv_tareWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="0 kg"
+                android:textSize="@dimen/sp22"
+                android:textColor="@color/black"
+                android:layout_marginRight="@dimen/item_spacing20"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="接受现金支付时打开钱箱"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="接受刷卡支付时打开钱箱"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="允许酒水打折"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="休眠状态自动登出系统"/>
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="＞"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="交班时打印交班报表"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="打印菜品简称 "/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="在小票上显示退菜情况"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="退菜时打印小票"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="微信点餐直接下单到厨房"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="外卖订单直接下单到厨房"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/gray_check_sth">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:padding="@dimen/dp15"
+                android:text="安全措施"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="退菜需要授权密码"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="删除菜品需要授权密码"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="打开钱箱需要授权密码"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="开机需要授权密码"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_time_hint"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:background="@drawable/selector_ck_area"
+                android:button="@android:color/transparent"
+                android:checked="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

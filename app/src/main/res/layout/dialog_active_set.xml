@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <cn.acewill.pos.next.widget.ComTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="@string/discounted_price"
+        android:textColor="@color/bbutton_info"
+        app:textSize="25" />
+    <View style="@style/sty_line"/>
+
+    <cn.acewill.pos.next.widget.CommonEditText
+        android:id="@+id/active_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:background="@drawable/border_layout_bg"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp15"
+        android:hint="@string/input_discounted_price"
+        android:textColorHint="@color/login_gray"
+        android:inputType="numberDecimal"
+        android:paddingLeft="@dimen/item_spacing10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing45"
+        android:layout_marginLeft="@dimen/item_spacing10"
+        android:layout_marginRight="@dimen/item_spacing10"
+        android:layout_marginTop="@dimen/item_spacing20"
+        android:layout_marginBottom="@dimen/item_spacing15"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/common_cancel"
+            android:gravity="center"
+            android:textSize="@dimen/str_defaul_18"
+            android:textColor="@color/login_gray"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:background="@drawable/btn_selector_gray"/>
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/common_sure"
+            android:gravity="center"
+            android:textSize="@dimen/str_defaul_18"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:background="@drawable/btn_selector_blue"/>
+    </LinearLayout>
+
+</LinearLayout>

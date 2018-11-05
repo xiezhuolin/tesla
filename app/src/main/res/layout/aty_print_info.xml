@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/delete_print"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:text="@string/printer_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10">
+
+                <EditText
+                    android:id="@+id/printer_name"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_layout_bg"
+                    android:hint="@string/input_printer_name"
+                    android:paddingLeft="@dimen/dp5"
+                    android:paddingRight="@dimen/dp5"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/sp20"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/print_reduce"
+                            android:layout_width="@dimen/dp45"
+                            android:layout_height="@dimen/dp45"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_toRightOf="@+id/dish_name"
+                            android:src="@drawable/reduce"/>
+
+                        <TextView
+                            android:id="@+id/print_count"
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:layout_toRightOf="@+id/dish_reduce"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/dp5"
+                            android:paddingRight="@dimen/dp5"
+                            android:selectAllOnFocus="true"
+                            android:text="1"
+                            android:textColor="@color/tab_font_color"
+                            android:textSize="@dimen/sp18"/>
+
+                        <ImageView
+                            android:id="@+id/print_plus"
+                            android:layout_width="@dimen/dp45"
+                            android:layout_height="@dimen/dp45"
+                            android:layout_toRightOf="@+id/dish_count"
+                            android:src="@drawable/icon_add_selector"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:text="@string/printer_ip"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10">
+
+                <EditText
+                    android:id="@+id/printer_ip"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_layout_bg"
+                    android:hint="@string/input_printer_ip"
+                    android:paddingLeft="@dimen/dp5"
+                    android:paddingRight="@dimen/dp5"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/sp20"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/print_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="@drawable/btn_login_selector"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/dp10"
+                            android:paddingLeft="@dimen/dp40"
+                            android:paddingRight="@dimen/dp40"
+                            android:paddingTop="@dimen/dp10"
+                            android:text="@string/test_printer_connect"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/wx_login_btn_font"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:text="@string/select_interface_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp20"/>
+
+                <RadioGroup
+                    android:id="@+id/interface_rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/print_lan"
+                        android:layout_width="@dimen/dp150"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/lan"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp18"/>
+
+                    <RadioButton
+                        android:id="@+id/print_bluetooth"
+                        android:layout_width="@dimen/dp150"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bluetooth"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp18"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/staff_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:text="@string/select_printer_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp20"/>
+
+                <RadioGroup
+                    android:id="@+id/style_rg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/print_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/common_printer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp18"/>
+
+                    <RadioButton
+                        android:id="@+id/print_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_printer"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp18"/>
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/lin_width"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/staff_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:gravity="center_vertical"
+                            android:text="@string/wide"
+                            android:textColor="@color/black_gv_title"
+                            android:textSize="@dimen/sp20"/>
+
+                        <EditText
+                            android:id="@+id/paper_wide"
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_layout_bg"
+                            android:hint="mm"
+                            android:paddingLeft="@dimen/dp5"
+                            android:paddingRight="@dimen/dp5"
+                            android:textColor="@color/gray_search_text"
+                            android:textSize="@dimen/sp20"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/staff_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:gravity="center_vertical"
+                            android:text="@string/height"
+                            android:textColor="@color/black_gv_title"
+                            android:textSize="@dimen/sp20"/>
+
+                        <EditText
+                            android:id="@+id/paper_heigh"
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_layout_bg"
+                            android:hint="mm"
+                            android:paddingLeft="@dimen/dp5"
+                            android:paddingRight="@dimen/dp5"
+                            android:textColor="@color/gray_search_text"
+                            android:textSize="@dimen/sp20"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center_vertical"
+                android:text="@string/printer_vendor_type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"/>
+
+            <cn.acewill.pos.next.widget.ScrolListView
+                android:id="@+id/lv_printerVendor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:divider="@color/line_gray"
+                android:dividerHeight="1dip"
+                android:footerDividersEnabled="true"
+                android:transcriptMode="normal"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/delete_print"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wx_login_layout_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/btn_login_selector"
+        android:gravity="center"
+        android:text="@string/setting_save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/wx_login_btn_font"/>
+</RelativeLayout>

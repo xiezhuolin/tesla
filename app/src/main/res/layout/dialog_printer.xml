@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:background="@color/white_order_title"
+        android:focusableInTouchMode="true"
+        android:layout_margin="@dimen/item_spacing3"
+        android:paddingLeft="@dimen/item_spacing15">
+
+        <TextView
+            android:id="@+id/print_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="打印机参数"
+            android:textColor="@color/order_day_font_gray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <LinearLayout
+            android:id="@+id/print_close_ll"
+            android:layout_width="@dimen/item_spacing50"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/item_spacing15">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:src="@mipmap/close" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/sty_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wx_login_layout_height"
+                android:layout_marginLeft="@dimen/item_spacing15"
+                android:layout_marginRight="@dimen/item_spacing15"
+                android:layout_marginTop="@dimen/item_spacing15"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="IP地址"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+
+                <cn.acewill.pos.next.widget.CommonEditText
+                    android:id="@+id/print_ip"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/border_layout_bg"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wx_login_layout_height"
+                android:layout_marginLeft="@dimen/item_spacing15"
+                android:layout_marginRight="@dimen/item_spacing15"
+                android:layout_marginTop="@dimen/item_spacing15"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="名称"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+
+                <cn.acewill.pos.next.widget.CommonEditText
+                    android:id="@+id/print_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/border_layout_bg"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wx_login_layout_height"
+                android:layout_marginLeft="@dimen/item_spacing15"
+                android:layout_marginRight="@dimen/item_spacing15"
+                android:layout_marginTop="@dimen/item_spacing15"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="品牌"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+
+                <cn.acewill.pos.next.widget.CommonEditText
+                    android:id="@+id/print_brand"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/border_layout_bg"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wx_login_layout_height"
+                android:layout_marginLeft="@dimen/item_spacing15"
+                android:layout_marginRight="@dimen/item_spacing15"
+                android:layout_marginTop="@dimen/item_spacing15"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="小票类型"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+
+                <TextView
+                    android:id="@+id/print_type"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/border_layout_bg"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/item_spacing15"
+                android:layout_marginRight="@dimen/item_spacing15"
+                android:layout_marginTop="@dimen/item_spacing15"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="描述"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+
+                <cn.acewill.pos.next.widget.CommonEditText
+                    android:id="@+id/print_des"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/border_layout_bg"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:textColor="@color/gray_search_text"
+                    android:textSize="@dimen/wx_scan_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing50"
+                android:layout_marginBottom="@dimen/item_spacing20"
+                android:layout_marginLeft="@dimen/item_spacing15"
+                android:layout_marginRight="@dimen/item_spacing15"
+                android:layout_marginTop="@dimen/item_spacing25"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/print_cancle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/item_spacing5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_gray"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/str_defaul_16" />
+
+                <TextView
+                    android:id="@+id/print_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/item_spacing5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_blue"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_16" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

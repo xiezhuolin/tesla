@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/item_spacing10"
+    android:paddingRight="@dimen/item_spacing10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing60"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/order_ticket"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="订单小票"
+                android:textColor="@color/pay_type_colors"
+                android:textSize="@dimen/str_defaul_16" />
+
+            <TextView
+                android:id="@+id/kitchen_ticket"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="厨房小票"
+                android:textColor="@color/pay_type_colors"
+                android:textSize="@dimen/str_defaul_16" />
+
+            <TextView
+                android:id="@+id/day_ticket"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="日结小票"
+                android:textColor="@color/pay_type_colors"
+                android:textSize="@dimen/str_defaul_16" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing10">
+
+        <View
+            style="@style/sty_line"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:id="@+id/line_blue"
+            android:layout_width="@dimen/item_spacing100"
+            android:layout_height="@dimen/item_spacing3"
+            android:layout_centerVertical="true"
+            android:background="@color/btn_blue" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+       <!-- <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3">
+
+            <TextView
+                android:id="@+id/ticket_save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing50"
+                android:text="保存"
+                android:background="@drawable/btn_selector_blue"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_16"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/item_spacing20"
+                android:layout_marginTop="@dimen/item_spacing10"
+                android:layout_marginLeft="@dimen/item_spacing50"
+                android:layout_marginRight="@dimen/item_spacing50"
+                />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:layout_above="@id/ticket_save">
+
+           <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_spacing10"
+                    android:text="文字大小"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/str_defaul_16" />
+
+                <GridView
+                    android:id="@+id/size_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/gridView_style"
+                    android:numColumns="4"
+                    android:layout_marginTop="@dimen/item_spacing10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_spacing10"
+                    android:text="文字粗细"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/str_defaul_16" />
+
+                <GridView
+                    android:id="@+id/thick_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/gridView_style"
+                    android:numColumns="4"
+                    android:layout_marginTop="@dimen/item_spacing10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_spacing10"
+                    android:text="对齐方式"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/str_defaul_16" />
+
+                <GridView
+                    android:id="@+id/style_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/gridView_style"
+                    android:numColumns="4"
+                    android:layout_marginTop="@dimen/item_spacing10"
+                    />
+
+            </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>-->
+        <View
+            android:layout_width="@dimen/item_spacing0.5"
+            android:layout_height="match_parent"
+            android:background="@color/line_gray"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:layout_marginBottom="@dimen/item_spacing20"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/item_spacing15">
+            <TextView
+                android:id="@+id/style_preview_58"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/item_spacing10"
+                android:textColor="@color/order_day_font_darkgray"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/item_spacing15">
+            <TextView
+                android:id="@+id/style_preview_80"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/item_spacing10"
+                android:textColor="@color/order_day_font_darkgray"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

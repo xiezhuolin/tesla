@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing45"
+        android:text="请选择客屏显示项"
+        android:textColor="@color/order_day_font_darkgray"
+        android:textSize="@dimen/str_defaul_16"
+        android:layout_marginLeft="@dimen/item_spacing10"
+        android:gravity="center_vertical"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listFile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/item_spacing80"
+        android:layout_below="@id/info_tv"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing45"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/item_spacing20"
+        android:orientation="horizontal">
+        <View android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"/>
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:text="保存"
+            android:background="@drawable/btn_selector_blue"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_16"
+
+            />
+        <View android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

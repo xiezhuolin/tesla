@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing60"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            >
+
+            <!--<TextView-->
+                <!--android:id="@+id/order_num"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="4"-->
+                <!--android:text="订单编号"-->
+                <!--android:textColor="@color/order_day_font_darkgray"-->
+                <!--android:textSize="@dimen/str_defaul_16"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/take_num"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="2.3"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="堂食"-->
+                <!--android:textColor="@color/order_day_font_darkgray"-->
+                <!--android:textSize="@dimen/str_defaul_16"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/order_source"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="2.3"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="来源"-->
+                <!--android:textColor="@color/order_day_font_darkgray"-->
+                <!--android:textSize="@dimen/str_defaul_16"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/order_total"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="2.1"-->
+                <!--android:gravity="right"-->
+                <!--android:text="应收"-->
+                <!--android:textColor="@color/order_day_font_darkgray"-->
+                <!--android:textSize="@dimen/str_defaul_16"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/order_cost"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="2.1"-->
+                <!--android:gravity="right"-->
+                <!--android:text="实收"-->
+                <!--android:textColor="@color/order_day_font_darkgray"-->
+                <!--android:textSize="@dimen/str_defaul_16"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/creat_time"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="3.3"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="下单时间"-->
+                <!--android:textColor="@color/order_day_font_darkgray"-->
+                <!--android:textSize="@dimen/str_defaul_16"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/edit_btn"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="@dimen/item_spacing30"-->
+                <!--android:layout_weight="3.15"-->
+                <!--android:background="@drawable/btn_selector_gray"-->
+                <!--android:gravity="center"-->
+                <!--android:text="修改"-->
+                <!--android:textColor="@color/order_day_font_darkgray"-->
+                <!--android:textSize="@dimen/str_defaul_16"-->
+                <!--android:visibility="gone"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/pay_btn"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="@dimen/item_spacing30"-->
+                <!--android:layout_marginLeft="@dimen/item_spacing8"-->
+                <!--android:layout_weight="3.15"-->
+                <!--android:background="@drawable/btn_selector_red"-->
+                <!--android:gravity="center"-->
+                <!--android:text="操作"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/str_defaul_16"-->
+                <!--/>-->
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/order_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="订单编号"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <TextView
+                android:id="@+id/take_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="就餐方式"
+                android:gravity="center_horizontal"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <TextView
+                android:id="@+id/order_source"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="来源"
+                android:gravity="center_horizontal"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <TextView
+                android:id="@+id/order_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.1"
+                android:text="应收"
+                android:gravity="right"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <TextView
+                android:id="@+id/order_cost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.1"
+                android:text="实收"
+                android:gravity="right"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+            <TextView
+                android:id="@+id/creat_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.3"
+                android:text="下单时间"
+                android:gravity="center_horizontal"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                />
+
+            <!--<TextView-->
+                <!--android:id="@+id/edit_btn"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="3.15"/>-->
+
+            <TextView
+            android:id="@+id/edit_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_spacing40"
+            android:layout_weight="3.15"
+            android:background="@drawable/btn_selector_gray"
+            android:gravity="center"
+            android:text="修改"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_16"
+            />
+
+
+
+            <TextView
+            android:id="@+id/pay_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_spacing40"
+            android:layout_marginLeft="@dimen/item_spacing8"
+            android:layout_weight="3.15"
+            android:background="@drawable/btn_selector_red"
+            android:gravity="center"
+            android:text="操作"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_16"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView style="@style/sty_line"
+        />
+    <cn.acewill.pos.next.widget.ScrolListView
+        android:id="@+id/order_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:visibility="gone"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:scrollbars="none"/>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/border"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/item_spacing3"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing40"
+            android:gravity="center"
+            android:textSize="@dimen/str_defaul_16"
+            android:textColor="@color/tab_font_color"
+            android:text="@string/please_choose_the_reason_for_the_withdrawal"/>
+        <View style="@style/sty_line"/>
+        <cn.acewill.pos.next.widget.ScrolListView
+            android:id="@+id/reason_list"
+            style="@style/listView_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing50"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:paddingRight="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing25"
+            android:layout_marginBottom="@dimen/item_spacing15">
+
+            <TextView
+                android:id="@+id/reason_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/common_cancel"
+                android:gravity="center"
+                android:background="@drawable/btn_selector_gray"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"
+                android:layout_marginRight="@dimen/item_spacing10"
+                />
+            <TextView
+                android:id="@+id/reason_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/refunds"
+                android:gravity="center"
+                android:background="@drawable/btn_selector_blue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_16"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

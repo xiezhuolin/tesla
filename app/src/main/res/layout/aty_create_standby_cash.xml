@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:layout_margin="@dimen/dp2"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rel_back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/transform"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/img_main_title_back"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_back"
+                    android:background="@color/transparent"
+                    android:paddingTop="1dp"
+                    android:text="@string/common_back"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/str_defaul_24"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="@string/create_standby_money"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp22"
+                />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/item_spacing20"
+                android:padding="@dimen/item_spacing10"
+                android:text="@string/common_add"
+                android:textColor="@color/bbutton_info_dish_item"
+                android:textSize="@dimen/str_defaul_22"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <cn.acewill.pos.next.widget.ComTextView
+                style="@style/key_number_style2"
+                android:id="@+id/tv_payment"
+                android:background="@drawable/key_number_blue_selector"
+                android:text="@string/pay"
+                android:textColor="@color/white"
+                app:textSize="28"/>
+
+            <cn.acewill.pos.next.widget.ComTextView
+                style="@style/key_number_style2"
+                android:background="@drawable/key_number_green_selector"
+                android:text="@string/receipt"
+                android:id="@+id/tv_collection"
+                android:textColor="@color/black"
+                app:textSize="28"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lin_spending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+               >
+
+                <TextView
+                    android:id="@+id/tv_standByCashType"
+                    style="@style/staff_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/expenditure_type"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/paytype_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:cacheColorHint="@color/transparent"
+                    android:listSelector="@color/transparent"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:paddingRight="@dimen/item_spacing10"
+                    android:scrollbars="none"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginRight="@dimen/dp10"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                style="@style/staff_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp70"
+                android:gravity="left|center_vertical"
+                android:text="@string/money"/>
+
+            <TextView
+                android:id="@+id/tv_moneyShow"
+                style="@style/staff_ed_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:gravity="center_vertical"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="@dimen/item_spacing20"
+                android:textSize="@dimen/dp20"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_common"
+            android:orientation="vertical">
+            <!--1、2、3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_one"
+                    style="@style/key_number_style2"
+                    android:text="1"
+                    app:textSize="28"
+                    />
+
+                <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/key_two"
+                style="@style/key_number_style2"
+                android:text="2"
+                app:textSize="28"
+                />
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_three"
+                    style="@style/key_number_style2"
+                    android:text="3"
+                    app:textSize="28"/>
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_other_100"
+                    style="@style/key_number_style2"
+                    android:text="¥100"
+                    android:background="@drawable/key_number_pink_selector"
+                    android:textColor="@color/black"
+                    app:textSize="28"/>
+            </LinearLayout>
+            <!--4、5、6-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_four"
+                    style="@style/key_number_style2"
+                    android:text="4"
+                    app:textSize="28"/>
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_five"
+                    style="@style/key_number_style2"
+                    android:text="5"
+                    app:textSize="28"
+                    />
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_six"
+                    style="@style/key_number_style2"
+                    android:text="6"
+                    app:textSize="28"/>
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_other_50"
+                    style="@style/key_number_style2"
+                    android:text="¥50"
+                    android:textColor="@color/black"
+                    android:background="@drawable/key_number_green_selector"
+                    app:textSize="28"/>
+            </LinearLayout>
+            <!--7、8、9-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_seven"
+                    style="@style/key_number_style2"
+                    android:text="7"
+                    app:textSize="28"/>
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_eight"
+                    style="@style/key_number_style2"
+                    android:text="8"
+                    app:textSize="28"
+                    />
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_nine"
+                    style="@style/key_number_style2"
+                    android:text="9"
+                    app:textSize="28"/>
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_other_20"
+                    style="@style/key_number_style2"
+                    android:text="¥20"
+                    android:textColor="@color/black"
+                    android:background="@drawable/key_number_orange_selector"
+                    app:textSize="28"/>
+            </LinearLayout>
+            <!--删除、0、·-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_delete"
+                    style="@style/key_number_style2"
+                    android:background="@drawable/key_number_red_selector"
+                    android:text="@string/delete"
+                    android:textColor="@color/white"
+                    app:textSize="25"/>
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_zero"
+                    style="@style/key_number_style2"
+                    android:text="0"
+                    app:textSize="28"
+                    />
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_point"
+                    style="@style/key_number_style2"
+                    android:text="·"
+                    android:textStyle="bold"
+                    app:textSize="40"/>
+
+                <cn.acewill.pos.next.widget.ComTextView
+                    android:id="@+id/key_other_10"
+                    style="@style/key_number_style2"
+                    android:text="¥10"
+                    android:background="@drawable/key_number_blue_selector"
+                    android:textColor="@color/black"
+                    app:textSize="28"/>
+            </LinearLayout>
+        </LinearLayout>
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/save_next_btn"
+            style="@style/key_number_style2"
+            android:layout_width="match_parent"
+            android:background="@drawable/key_number_blue_selector"
+            android:text="@string/save_and_add_the_next_item"
+            android:textColor="@color/white"
+            app:textSize="28"/>
+    </LinearLayout>
+
+</ScrollView>
+

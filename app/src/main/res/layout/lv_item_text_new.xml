@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rel_count"
+                >
+
+    <cn.acewill.pos.next.widget.MarqueeTextView
+        android:id="@+id/tv_dishKinds"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:padding="@dimen/dp10"
+        android:background="@drawable/border_angle"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="@color/black"
+        android:textSize="@dimen/str_defaul_18"
+        />
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_line"-->
+        <!--android:layout_width="0.5dp"-->
+        <!--android:layout_height="@dimen/item_spacing60"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:background="@color/app_line_gray_color"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_bottom_line"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/item_spacing0.5"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/app_line_gray_color"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/tv_bottom_line2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/item_spacing5"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:visibility="gone"-->
+        <!--android:background="@color/blue_table_nomber_title"/>-->
+
+</RelativeLayout>

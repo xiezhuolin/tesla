@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_order_title">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/gray_check_sth"
+        android:layout_height="wrap_content">
+        <TextView
+        style="@style/staff_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp15"
+        android:text="@string/printer_list"/>
+
+        <ImageView
+            android:id="@+id/iv_add_printer"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <cn.acewill.pos.next.widget.ScrolListView
+        android:id="@+id/lv_printer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/dp5"
+        android:background="@color/white"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dip"
+        android:footerDividersEnabled="true"
+        android:transcriptMode="normal"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/gray_check_sth"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp15"
+            android:text="KDS"/>
+
+        <ImageView
+            android:id="@+id/img_add_kds"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <cn.acewill.pos.next.widget.ScrolListView
+        android:id="@+id/lv_kds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/dp5"
+        android:background="@color/white"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dip"
+        android:footerDividersEnabled="true"
+        android:transcriptMode="normal"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/gray_check_sth"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp15"
+            android:text="@string/print_plan"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <cn.acewill.pos.next.widget.ScrolListView
+        android:id="@+id/lv_printerPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:layout_margin="@dimen/dp5"
+        android:background="@color/white"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dip"
+        android:footerDividersEnabled="true"
+        android:transcriptMode="normal"
+        />
+
+</LinearLayout>

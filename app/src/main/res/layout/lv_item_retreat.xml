@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/item_spacing80"
+              android:background="@drawable/border_white"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_dishName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/ct_cp"
+        android:textColor="@color/pay_type_colors"
+        android:textSize="@dimen/str_defaul_18"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_money_count"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/dish_price_count"
+        android:textColor="@color/pay_type_colors"
+        android:textSize="@dimen/str_defaul_18"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/place_order_time_xx"
+        android:textColor="@color/pay_type_colors"
+        android:textSize="@dimen/str_defaul_18"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_person"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/create_order_name"
+        android:textColor="@color/pay_type_colors"
+        android:textSize="@dimen/str_defaul_18"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_add_selector"
+            />
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/btn_add"
+            android:padding="@dimen/item_spacing10"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:textColor="@color/app_text_color"
+            android:textSize="@dimen/str_defaul_24"/>
+        <Button
+            android:id="@+id/btn_minus"
+            android:layout_width="50dp"
+            android:layout_centerVertical="true"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:background="@drawable/reduce"
+            android:layout_toStartOf="@+id/tv_count"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

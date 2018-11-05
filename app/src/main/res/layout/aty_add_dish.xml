@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:padding="@dimen/item_spacing25"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/item_spacing5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜&#12288;品&#12288;分&#12288;类"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"/>
+
+        <TextView
+            android:id="@+id/tv_dishCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing20"
+            android:background="@drawable/border_layout_bg"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"
+            android:hint="选取菜品分类"
+            android:gravity="left|center_vertical"
+            android:drawablePadding="@dimen/dp15"
+            android:drawableRight="@mipmap/image_arrow"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/item_spacing5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜&#12288;品&#12288;单&#12288;位"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"/>
+
+        <TextView
+            android:id="@+id/tv_dishUnit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing20"
+            android:background="@drawable/border_layout_bg"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"
+            android:hint="选取菜品单位"
+            android:gravity="left|center_vertical"
+            android:drawablePadding="@dimen/dp15"
+            android:drawableRight="@mipmap/image_arrow"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/item_spacing5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜&#12288;品&#12288;时&#12288;段"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"/>
+
+        <TextView
+            android:id="@+id/tv_dishTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing20"
+            android:background="@drawable/border_layout_bg"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"
+            android:hint="选取菜品时段"
+            android:gravity="left|center_vertical"
+            android:drawablePadding="@dimen/dp15"
+            android:drawableRight="@mipmap/image_arrow"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/item_spacing10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#12288;&#12288;菜&#12288;品&#12288;名"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"/>
+
+        <EditText
+            android:id="@+id/ed_dishName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing20"
+            android:gravity="left|center_vertical"
+            android:hint="请输入菜品名"
+            android:background="@drawable/border_layout_bg"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/item_spacing10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜&#12288;品&#12288;价&#12288;格"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"/>
+
+        <cn.acewill.pos.next.widget.CommonEditText
+            android:id="@+id/ed_dishPrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing20"
+            android:background="@drawable/border_layout_bg"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:numeric="integer"
+            android:hint="请输入菜品价格"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/item_spacing10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜&#12288;品&#12288;数&#12288;量"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"/>
+
+        <cn.acewill.pos.next.widget.CommonEditText
+            android:id="@+id/ed_dishCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing20"
+            android:background="@drawable/border_layout_bg"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:numeric="integer"
+            android:gravity="left|center_vertical"
+            android:hint="请输入菜品份数,不输入默认设置99999份"
+            android:singleLine="true"
+            android:textColor="@color/gray_search_text"
+            android:textSize="@dimen/str_defaul_20"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginBottom="@dimen/dp15"
+        android:background="@drawable/btn_login_selector"
+        android:gravity="center"
+        android:text="添  加"
+        android:textColor="@color/white"
+        android:textSize="@dimen/str_defaul_20"/>
+
+</LinearLayout>

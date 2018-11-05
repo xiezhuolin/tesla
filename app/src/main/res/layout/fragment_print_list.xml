@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/dp10"
+              android:background="@color/white"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="@dimen/item_spacing50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/brand"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="IP"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/description"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/ticket_type"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="@string/sth_home_do"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+    </LinearLayout>
+    <View style="@style/sty_line" />
+    <ListView
+        android:id="@+id/lv_print"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_weight="1"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dip"
+        android:footerDividersEnabled="true"
+        android:transcriptMode="normal"
+        />
+
+</LinearLayout>

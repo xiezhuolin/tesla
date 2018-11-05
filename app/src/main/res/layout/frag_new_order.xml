@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_main_bg_gray"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/item_spacing8"
+        android:layout_weight="0.6"
+        android:background="@drawable/border_right_angle"
+        android:orientation="vertical"
+        android:padding="@dimen/item_spacing1">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_foc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:id="@+id/view_line_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing0.5"
+                android:layout_alignParentTop="true"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tv_price_hine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/item_spacing5"
+                android:text="@string/price_total"
+                android:textColor="@color/app_text_color"
+                android:textSize="@dimen/str_defaul_16"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="@dimen/item_spacing5"
+                android:text="¥ 00.00"
+                android:textColor="@color/app_text_price_color"
+                android:textSize="@dimen/str_defaul_16"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_price"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_clean"
+                    style="@style/order_btn_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_clean_bg"
+                    android:text="@string/order_clean"
+                    android:textColor="@color/app_text_color"/>
+
+                <Button
+                    android:id="@+id/btn_checkOut"
+                    style="@style/order_btn_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/btn_check_out_bg"
+                    android:text="@string/order_check_out"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/app_main_bg_gray">
+
+            <TextView
+                android:id="@+id/tv_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/item_spacing8"
+                android:text="@string/ct_dd"
+                android:textColor="@color/app_text_color"
+                android:textSize="@dimen/str_defaul_16"/>
+
+            <ImageView
+                android:id="@+id/img_main_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/item_spacing10"
+                android:src="@mipmap/img_order_close"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/view_line_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing0.5"
+                android:layout_below="@+id/tv_order_title"
+                android:background="@color/gray"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/rel_foc"
+            android:orientation="vertical"
+            android:layout_below="@+id/rel_top">
+
+            <ListView
+                android:id="@+id/lv_retreat"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/common_yellow"
+                android:scrollbars="none"
+                android:visibility="gone"
+                android:footerDividersEnabled="true"
+                android:transcriptMode="normal"
+                />
+            <cn.acewill.pos.next.swipemenulistview.SwipeMenuListView
+                android:id="@+id/lv_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@color/line_gray"
+                android:dividerHeight="1dip"
+                android:footerDividersEnabled="true"
+                android:transcriptMode="normal"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/item_spacing8"
+        android:layout_marginRight="@dimen/item_spacing8"
+        android:layout_marginTop="@dimen/item_spacing8"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/border_right_angle"
+        android:orientation="vertical"
+        android:padding="@dimen/item_spacing0.5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/item_spacing5"
+            android:padding="@dimen/item_spacing10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_search"
+                style="@style/order_btn_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_check_out_bg"
+                android:padding="@dimen/item_spacing10"
+                android:text="@string/text_search"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing35"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/item_spacing5"
+                android:layout_toLeftOf="@+id/btn_search"
+                android:background="@drawable/layout_circle_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <cn.acewill.pos.next.widget.CommonEditText
+                android:id="@+id/search_cotent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_spacing3"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="请输入菜品名称"
+                android:padding="@dimen/item_spacing8"
+                android:inputType="text"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:textColor="@color/gray_search_text"
+                android:textSize="@dimen/str_defaul_14"
+                />
+
+                <LinearLayout
+                    android:id="@+id/search_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="@dimen/item_spacing10"
+                    android:paddingRight="@dimen/item_spacing10"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/item_spacing20"
+                        android:layout_height="@dimen/item_spacing20"
+                        android:background="@mipmap/close_back"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing0.5"
+            android:background="@color/app_line_gray_color"/>
+
+        <GridView
+            android:id="@+id/gv_dish_kind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:listSelector="@color/transparent"
+            android:numColumns="4"
+            android:scrollbars="none"
+            />
+
+        <cn.acewill.pos.next.widget.NoPreloadViewPager
+            android:id="@+id/vp_dish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/gv_dish_kind"
+            android:background="@color/white"
+            >
+        </cn.acewill.pos.next.widget.NoPreloadViewPager>
+    </LinearLayout>
+
+
+</LinearLayout>

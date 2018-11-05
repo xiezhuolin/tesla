@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dishkind_bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_dark_check"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/back_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/item_spacing10">
+
+            <cn.acewill.pos.next.widget.ComTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/item_spacing15"
+                android:paddingBottom="@dimen/item_spacing15"
+                android:drawableLeft="@mipmap/back_left_white" />
+
+            <cn.acewill.pos.next.widget.ComTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:text="返回"
+                android:textColor="@color/white"
+                app:textSize="30" />
+        </LinearLayout>
+
+        <cn.acewill.pos.next.widget.ComTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="更多"
+            android:layout_centerInParent="true"
+            android:background="@color/blue_dark_check"
+            android:textColor="@color/white"
+            app:textSize="35" />
+    </RelativeLayout>
+
+    <View style="@style/sty_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/scan_set"
+                style="@style/check_out_text"
+                android:background="@drawable/layout_selector_blue"
+                android:paddingLeft="@dimen/item_spacing15"
+                android:textColor="@color/black_font_selector"
+                android:text="正反扫设置" />
+
+            <View style="@style/sty_line" />
+            <!--外卖配送费-->
+            <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/sale_set"
+                style="@style/check_out_text"
+                android:background="@drawable/layout_selector_blue"
+                android:paddingLeft="@dimen/item_spacing15"
+                android:textColor="@color/black_font_selector"
+                android:text="配送费设置" />
+
+            <View style="@style/sty_line" />
+
+            <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/up_print"
+                style="@style/check_out_text"
+                android:background="@drawable/layout_selector_blue"
+                android:paddingLeft="@dimen/item_spacing15"
+                android:textColor="@color/black_font_selector"
+                android:text="标签打印机设置" />
+            <View style="@style/sty_line" />
+            <cn.acewill.pos.next.widget.ComTextView
+                android:id="@+id/print_list"
+                style="@style/check_out_text"
+                android:background="@drawable/layout_selector_blue"
+                android:paddingLeft="@dimen/item_spacing15"
+                android:textColor="@color/black_font_selector"
+                android:text="打印机列表" />
+
+            <View style="@style/sty_line" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/set_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

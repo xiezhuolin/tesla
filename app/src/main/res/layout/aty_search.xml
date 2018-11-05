@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/app_main_bg_gray">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing70"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/rel_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:paddingRight="@dimen/item_spacing10"
+            >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/btn_back"
+                android:paddingRight="5dp"/>
+
+            <TextView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_back"
+                android:background="@color/transparent"
+                android:paddingTop="1dp"
+                android:paddingLeft="@dimen/item_spacing5"
+                android:text="@string/common_back"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_24"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing35"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/item_spacing5"
+            android:layout_toRightOf="@+id/rel_back"
+            android:background="@drawable/layout_circle_bg"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <cn.acewill.pos.next.widget.CommonEditText
+                android:id="@+id/search_cotent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_spacing3"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/inuput_dish_first_letter_or_dishCode"
+                android:padding="@dimen/item_spacing8"
+                android:singleLine="true"
+                android:inputType="number"
+                android:digits="@string/filter_vcode"
+                android:imeOptions="actionSearch"
+                android:textColor="@color/gray_search_text"
+                android:textSize="@dimen/str_defaul_14"
+                />
+
+            <LinearLayout
+                android:id="@+id/search_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/item_spacing10"
+                android:visibility="gone"
+                android:paddingRight="@dimen/item_spacing10"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/item_spacing20"
+                    android:layout_height="@dimen/item_spacing20"
+                    android:background="@mipmap/close_back"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <cn.acewill.pos.next.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dip"
+        android:layout_margin="@dimen/item_spacing10"
+        android:footerDividersEnabled="true"
+        android:transcriptMode="normal"
+        />
+
+</LinearLayout>

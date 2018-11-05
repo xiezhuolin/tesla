@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/item_spacing5"
+        android:padding="@dimen/item_spacing1"
+        android:background="@drawable/border_right_angle"
+            android:layout_height="match_parent">
+
+                <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/item_spacing3"
+        android:text="38.00"
+        android:textColor="@color/app_text_price_color"
+        android:textSize="@dimen/str_defaul_14"/>
+
+            <TextView
+                android:id="@+id/tv_dishName"
+                android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/tv_money"
+        android:background="@color/white"
+                android:ellipsize="end"
+        android:gravity="left"
+                android:maxLines="1"
+                android:padding="@dimen/item_spacing3"
+        android:textColor="@color/app_text_color"
+        android:textSize="@dimen/str_defaul_14"/>
+
+    <ImageView
+        android:id="@+id/iv_dishImagePath"
+                android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_money"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/iv_sale_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@mipmap/icon_diancai_shouqin"/>
+
+    <ImageView
+        android:id="@+id/iv_sale_dish"
+        android:layout_width="226dp"
+        android:layout_height="118dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@mipmap/icon_diancai_yidian"/>
+    </RelativeLayout>
+</RelativeLayout>

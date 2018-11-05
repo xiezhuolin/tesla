@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/item_spacing8"
+        android:paddingBottom="@dimen/item_spacing8">
+        <TextView
+            android:id="@+id/payTypeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/select_pay_size"
+            />
+        <TextView
+            android:id="@+id/payTypeMoney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0.00"
+            android:gravity="center"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/select_pay_size"
+            />
+        <TextView
+            android:id="@+id/payTypeReturn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/delete"
+            android:gravity="center"
+            android:paddingTop="@dimen/item_spacing3"
+            android:paddingBottom="@dimen/item_spacing3"
+            android:textColor="@color/order_day_font_darkgray"
+            android:background="@drawable/btn_selector_gray"
+            android:textSize="@dimen/select_pay_size"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

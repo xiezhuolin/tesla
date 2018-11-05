@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/item_spacing8"
+        android:background="@mipmap/img_order_add"
+        />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/btn_add"
+        android:padding="@dimen/item_spacing10"
+        android:text="1"
+        android:textColor="@color/app_text_color"
+        android:textSize="@dimen/str_defaul_18"/>
+    <Button
+        android:id="@+id/btn_minus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tv_count"
+        android:layout_marginLeft="@dimen/item_spacing8"
+        android:background="@mipmap/img_order_minus"
+        />
+
+    <TextView
+        android:id="@+id/tv_dishName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_toLeftOf="@+id/btn_minus"
+        android:padding="@dimen/item_spacing10"
+        android:layout_centerVertical="true"
+        android:text="11111"
+        android:textColor="@color/app_text_color"
+        android:textSize="@dimen/str_defaul_18"/>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing45"
+                android:background="@color/gray_app_bg"
+                android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing45"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/text_normal_padding"
+        android:paddingRight="@dimen/text_normal_padding">
+
+        <TextView
+            android:id="@+id/dishName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="1.xxx"
+            android:paddingLeft="@dimen/item_spacing20"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/str_defaul_15"/>
+
+        <TextView
+            android:id="@+id/dishCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="right"
+            android:text="X122"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/str_defaul_15"/>
+
+        <TextView
+            android:id="@+id/dishPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="￥200.22"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/str_defaul_15"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/sty_line"
+        android:layout_below="@+id/lin_top"/>
+
+</RelativeLayout>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="horizontal"
+    >
+
+    <TextView
+        android:id="@+id/text_tips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="请在 设置--->高级设置中打开接收网络订单选项,然后重启POS即可开启网络接单功能."
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/dp25"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/lin_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp5"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing50"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <cn.acewill.pos.next.widget.CommonEditText
+                android:id="@+id/search_cotent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp6"
+                android:background="@drawable/layout_circle_bg"
+                android:digits="@string/filter_vcode"
+                android:drawableLeft="@mipmap/img_search_order"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:hint="@string/text_search_order_tablename"
+                android:imeOptions="actionSearch"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dp5"
+                android:singleLine="true"
+                android:textColor="@color/gray_search_text"
+                android:textSize="@dimen/str_defaul_16"
+                />
+
+            <LinearLayout
+                android:id="@+id/search_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/item_spacing10"
+                android:paddingRight="@dimen/item_spacing20"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/item_spacing20"
+                    android:layout_height="@dimen/item_spacing20"
+                    android:background="@mipmap/close_back"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/order_srl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp3">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/order_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/font_gray"
+                android:dividerHeight="0.5dip"
+                android:footerDividersEnabled="true"
+                android:transcriptMode="normal"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lin_center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp5"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_center_count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lin_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing50"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/dish_list"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/str_defaul_22"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_receive"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/item_spacing40"
+                    android:layout_marginLeft="@dimen/item_spacing8"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_bright_blue"
+                    android:gravity="center"
+                    android:text="@string/accept_order"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_18"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_refuse"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/item_spacing40"
+                    android:layout_marginLeft="@dimen/item_spacing8"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector_red"
+                    android:gravity="center"
+                    android:text="@string/refuse"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_18"
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/lin_top"
+                android:background="@color/font_gray"/>
+
+            <LinearLayout
+                android:id="@+id/lin_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_line"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10">
+
+                <TextView
+                    android:id="@+id/order_dish_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/dish_menu_counts"
+                    android:textColor="@color/main_order_item_bg"
+                    android:textSize="@dimen/str_defaul_18"
+                    />
+
+                <TextView
+                    android:id="@+id/order_customerAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/repast_counts"
+                    android:textColor="@color/main_order_item_bg"
+                    android:textSize="@dimen/str_defaul_18"
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/lin_tips"
+                android:background="@color/font_gray"/>
+
+            <cn.acewill.pos.next.widget.ScrolListView
+                android:id="@+id/dish_list"
+                style="@style/listView_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view_line2"
+                android:layout_margin="@dimen/dp3"
+                android:divider="@color/line_gray"
+                android:dividerHeight="1dip"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp5"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/sc_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/lin_right_count"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp5"
+                android:orientation="vertical"
+                android:padding="@dimen/dp5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/order_creat_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp5"
+                        android:text="@string/place_order_time"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+
+                    <TextView
+                        android:id="@+id/order_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp5"
+                        android:text="@string/price"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+
+                    <TextView
+                        android:id="@+id/order_activeMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp5"
+                        android:text="@string/active_money"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+
+                    <TextView
+                        android:id="@+id/order_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp5"
+                        android:text="@string/cost"
+                        android:textColor="@color/main_order_item_bg"
+                        android:textSize="@dimen/str_defaul_18"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_payType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bbutton_info_dish_item">
+
+                        <TextView
+                            style="@style/staff_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="left"
+                            android:padding="@dimen/dp5"
+                            android:text="@string/pay_info"/>
+                    </RelativeLayout>
+
+                    <cn.acewill.pos.next.widget.ScrolListView
+                        android:id="@+id/lv_payType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:background="@color/white"
+                        android:divider="@color/line_gray"
+                        android:dividerHeight="1dip"
+                        android:footerDividersEnabled="true"
+                        android:transcriptMode="normal"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bbutton_info_dish_item">
+
+                        <TextView
+                            style="@style/staff_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="left"
+                            android:padding="@dimen/dp5"
+                            android:text="@string/member_info"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/member_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/member_card_number_xx"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/member_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/member_name_xx"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/member_level"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/member_card_level"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/member_MemberConsumeCost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/consume_money"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_saleOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bbutton_info_dish_item">
+
+                        <TextView
+                            style="@style/staff_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="left"
+                            android:padding="@dimen/dp5"
+                            android:text="@string/distribution_information"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sale_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/name_xx"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/sale_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/phone_xx"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/sale_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/meals_address"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+
+                        <TextView
+                            android:id="@+id/sale_orderNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/platform_order_number"
+                            android:textColor="@color/main_order_item_bg"
+                            android:textSize="@dimen/str_defaul_18"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

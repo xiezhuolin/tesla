@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/item_spacing5"
+        android:paddingBottom="@dimen/item_spacing5">
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/pay_name"
+            style="@style/check_out_tickt_text"
+            android:layout_weight="1"
+            app:textSize="22"
+            app:setHeight="false"
+            android:text=""/>
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/pay_money"
+            style="@style/check_out_tickt_text"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:textStyle="bold"
+            app:textSize="22"
+            app:setHeight="false"
+            android:text=""/>
+    </LinearLayout>
+</LinearLayout>

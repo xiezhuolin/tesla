@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/print_brand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="品牌"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:id="@+id/print_ip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="IP"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:id="@+id/print_des"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="描述"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <TextView
+            android:id="@+id/print_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="小票类型"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/print_delete"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_spacing35"
+                android:layout_weight="1"
+                android:text="删除"
+                android:visibility="gone"
+                android:background="@drawable/btn_selector_gray"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:gravity="center"
+                android:textSize="@dimen/str_defaul_16"
+                android:textColor="@color/order_day_font_darkgray"/>
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_spacing35"
+                android:layout_weight="1"
+                android:text="修改"
+                android:visibility="gone"
+                android:background="@drawable/btn_selector_blue"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_16"/>
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_spacing35"
+                android:layout_weight="1"
+                android:text="测试打印小票"
+                android:background="@drawable/btn_selector_blue"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:layout_marginRight="@dimen/dp10"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/str_defaul_16"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

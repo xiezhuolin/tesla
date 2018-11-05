@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/border"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:layout_margin="@dimen/item_spacing3"
+        android:background="@color/white_order_title"
+        android:focusableInTouchMode="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/dialog_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/dialog_transparent_pressed"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/common_back"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/item_spacing10"
+            android:text="@string/sth_print_state_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp25"/>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            style="@style/dialog_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dialog_transparent_pressed"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/common_sure"
+            android:textColor="@color/blue_table_nomber_title"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing0.5"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10">
+
+        <LinearLayout
+            android:id="@+id/lin_print_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/print_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="@dimen/dp15"
+                android:text="@string/printer_and_Kds_state"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/str_defaul_18"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_line_state"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing0.5"
+                android:background="@color/title_text_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_print_record"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/print_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="@dimen/dp15"
+                android:text="@string/print_the_record"
+                android:textColor="@color/main_order_item_bg"
+                android:textSize="@dimen/str_defaul_18"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_line_record"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing0.5"
+                android:background="@color/transparent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lin_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing60"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dp10"
+            >
+
+            <TextView
+                android:id="@+id/all_ord"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="@string/name"
+                android:textColor="@color/pay_type_colors"
+                android:textSize="@dimen/str_defaul_18"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tack_out_ord"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="IP"
+                android:textColor="@color/pay_type_colors"
+                android:textSize="@dimen/str_defaul_18"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/online_ord"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/associate_POS_or_stalls"
+                android:textColor="@color/pay_type_colors"
+                android:textSize="@dimen/str_defaul_18"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/unpayde_ord"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="@string/state"
+                android:textColor="@color/pay_type_colors"
+                android:textSize="@dimen/str_defaul_18"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/payde_ord"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="@string/sth_home_do"
+                android:textColor="@color/pay_type_colors"
+                android:textSize="@dimen/str_defaul_18"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing0.5"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/printer"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"
+                android:visibility="gone"/>
+
+            <TextView
+                style="@style/sty_line"
+                android:layout_marginTop="@dimen/dp10"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/lv_printer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_line"
+                android:layout_marginTop="@dimen/item_spacing10"
+                android:divider="@null"
+                android:dividerHeight="0dip"
+                android:footerDividersEnabled="true"
+                android:transcriptMode="normal"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KDS"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"
+                android:visibility="gone"/>
+
+            <TextView
+                style="@style/sty_line"
+                android:layout_marginTop="@dimen/dp10"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/lv_KDS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_line"
+                android:layout_marginTop="@dimen/item_spacing10"
+                android:divider="@null"
+                android:dividerHeight="0dip"
+                android:footerDividersEnabled="true"
+                android:transcriptMode="normal"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/lin_title2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing60"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dp10"
+            >
+            <TextView
+                android:id="@+id/order_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:text="订单号"
+                android:gravity="center"
+                android:textSize="@dimen/str_defaul_18"
+                android:textColor="@color/pay_type_colors"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/receipt_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:text="小票类型"
+                android:gravity="center"
+                android:textSize="@dimen/str_defaul_18"
+                android:textColor="@color/pay_type_colors"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/print_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="打印机名称"
+                android:gravity="center"
+                android:textSize="@dimen/str_defaul_18"
+                android:textColor="@color/pay_type_colors"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/print_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:text="打印时间"
+                android:gravity="center"
+                android:textSize="@dimen/str_defaul_18"
+                android:textColor="@color/pay_type_colors"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/print_record_state"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:text="状态"
+                android:gravity="center"
+                android:textSize="@dimen/str_defaul_18"
+                android:textColor="@color/pay_type_colors"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing0.5"
+            android:background="@color/gray"/>
+        <ListView
+            android:id="@+id/lv_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_line"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:divider="@null"
+            android:dividerHeight="0dip"
+            android:footerDividersEnabled="true"
+            android:transcriptMode="normal"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing10"
+        android:layout_below="@+id/ed_person"/>
+
+
+</LinearLayout>

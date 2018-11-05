@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/dish_name"
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:text="@string/ct_cp"
+            app:setHeight="false"
+            app:textSize="24"
+            />
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/dish_count"
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="@string/sth_dishSum"
+            app:setHeight="false"
+            app:textSize="24"
+            />
+
+        <cn.acewill.pos.next.widget.ComTextView
+            android:id="@+id/dish_price"
+            style="@style/check_out_tickt_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="right"
+            android:text="@string/sth_dishPrice"
+            app:setHeight="false"
+            app:textSize="24"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_disCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="@dimen/dp5"
+        android:textColor="@color/login_gray"
+        android:text="11111111"
+        android:layout_below="@+id/tv_dishName"
+        android:textSize="@dimen/sp14"
+        />
+
+</LinearLayout>

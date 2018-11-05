@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_ll"
+        style="@style/sty_linerlayout"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/dish_show_ll"
+            style="@style/sty_linerlayout"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/text_normal_padding"
+            android:paddingRight="@dimen/text_normal_padding" >
+
+            <TextView
+                android:id="@+id/dishName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="1.xxx"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/str_defaul_15" />
+
+            <TextView
+                android:id="@+id/dishCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:text="X122"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/str_defaul_15" />
+
+            <TextView
+                android:id="@+id/dishPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:text="￥200.22"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/str_defaul_15" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line"
+            style="@style/sty_line" />
+
+        <LinearLayout
+            android:id="@+id/dish_edit_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/text_normal_padding"
+            android:paddingRight="@dimen/text_normal_padding" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing50"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/isout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:paddingRight="@dimen/item_spacing20"
+                        android:textColor="@color/font_gray" />
+
+                    <TextView
+                        android:id="@+id/num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/actionsheet_red" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/dish_reduce"
+                    android:layout_width="@dimen/str_defaul_22"
+                    android:layout_height="@dimen/str_defaul_22"
+                    android:src="@drawable/btn_minus_dish_bg" />
+
+                <TextView
+                    android:id="@+id/dish_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing10"
+                    android:layout_marginRight="@dimen/item_spacing10"
+                    android:text="1"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_15" />
+
+                <ImageView
+                    android:id="@+id/dish_add"
+                    android:layout_width="@dimen/str_defaul_22"
+                    android:layout_height="@dimen/str_defaul_22"
+                    android:src="@drawable/btn_add_dish_bg" />
+
+                <ImageView
+                    android:id="@+id/dish_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing20"
+                    android:src="@mipmap/dish_delete" />
+            </LinearLayout>
+
+            <cn.acewill.pos.next.widget.ScrolListView
+                android:id="@+id/suborder_lv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:listSelector="@color/transparent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

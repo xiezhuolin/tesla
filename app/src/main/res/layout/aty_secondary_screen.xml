@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bg">
+
+        <TextView
+            android:id="@+id/tv_main_title"
+            style="@style/table_title_white"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wisdom_cash_register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_26"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:background="@color/title_bg"
+        android:orientation="horizontal">
+
+        <cn.acewill.pos.next.widget.MarqueeTextView
+            android:id="@+id/tv_pos_level"
+            style="@style/table_title_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1.5"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:singleLine="true"
+            android:text="@string/company_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_20"/>
+
+        <cn.acewill.pos.next.widget.MarqueeTextView
+            android:id="@+id/tv_pos_tips"
+            style="@style/table_title_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:singleLine="true"
+            android:text="@string/welcome"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_20"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rel_bottom"
+        android:layout_below="@+id/rel_top"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rel_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/tv_left_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+                android:text="@string/Menu"
+                android:textColor="@color/black"
+                android:textSize="@dimen/str_defaul_20"/>
+
+            <TextView
+                android:id="@+id/tv_left_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:layout_below="@+id/tv_left_title"
+                android:background="@color/line_gray"/>
+
+            <LinearLayout
+                android:id="@+id/lin_left_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_left_line"
+                android:layout_margin="@dimen/dp3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp10"
+                    android:paddingRight="@dimen/dp10"
+                    >
+
+                    <TextView
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/ct_cp"
+                        android:textSize="@dimen/sp16"
+                        />
+
+                    <TextView
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/sth_dishSum"
+                        android:textSize="@dimen/sp16"
+                        />
+
+                    <TextView
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/subtotal"
+                        android:textSize="@dimen/sp16"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_left_line2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0.5"
+                android:layout_below="@+id/lin_left_tips"
+                android:background="@color/line_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/rel_pay_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:id="@+id/lin_dishCountInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dish_sum"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/dish_sums"
+                        android:textSize="@dimen/sp16"
+                        />
+
+                    <TextView
+                        android:id="@+id/dish_price"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/dish_prices"
+                        android:textSize="@dimen/sp16"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_dishCountInfo2"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/lin_dishCountInfo"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dish_active"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/dish_active"
+                        android:textSize="@dimen/sp16"
+                        />
+
+                    <TextView
+                        android:id="@+id/dish_total"
+                        style="@style/check_out_tickt_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/dish_total"
+                        android:textSize="@dimen/sp16"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pay_type"
+                    style="@style/check_out_tickt_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/pay_type"
+                    android:textSize="@dimen/sp16"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/member_info"
+                    style="@style/check_out_tickt_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lin_dishCountInfo2"
+                    android:gravity="left"
+                    android:text=""
+                    android:textSize="@dimen/sp16"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+            <cn.acewill.pos.next.widget.ScrolListView
+                android:id="@+id/dish_list"
+                style="@style/listView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rel_pay_info"
+                android:layout_below="@+id/tv_left_line2"
+                android:layout_margin="@dimen/dp3"
+                android:divider="@color/line_gray"
+                android:dividerHeight="1dip"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <!--<com.daimajia.slider.library.SliderLayout-->
+                <!--android:id="@+id/ad_slider"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--custom:auto_cycle="true"-->
+                <!--custom:indicator_visibility="invisible"-->
+                <!--custom:pager_animation="Accordion"-->
+                <!--custom:pager_animation_span="1100"/>-->
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/roll_pagerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rollviewpager_play_delay="3000"/>
+            <ImageView
+                android:id="@+id/iv_dishImagePath"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

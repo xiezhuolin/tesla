@@ -1,0 +1,15 @@
+
+.settings
+.classpath
+.project
+.idea
+.gradle/
+*.iml
+.springBeans
+.DS_Store
+._.DS_Store
+._*.*
+target/
+build/
+/bin/
+local.properties

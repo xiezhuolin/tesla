@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_order_title">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/software_version"/>
+
+        <TextView
+            android:id="@+id/tv_appVersion"
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="V 1.0.1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/setting_device_name"/>
+
+        <TextView
+            android:id="@+id/device_Name"
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="@string/device_name"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/cloud_pos_account_name"/>
+
+        <TextView
+            android:id="@+id/user_Name"
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="@string/administrator"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/setting_service_address"/>
+
+        <TextView
+            android:id="@+id/server_address"
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="sz.canxingjian,com"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/online_support"/>
+
+        <TextView
+            style="@style/staff_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="1107878"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/unbind_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wx_login_layout_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@drawable/btn_selector_bright_blue"
+        android:gravity="center"
+        android:text="@string/unbind_terminal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/wx_login_btn_font"/>
+
+
+
+</LinearLayout>

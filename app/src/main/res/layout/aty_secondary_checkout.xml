@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/item_spacing10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_layout_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing40"
+                android:layout_margin="@dimen/item_spacing1"
+                android:background="@color/white_order_title"
+                android:gravity="center"
+                android:text="消费清单"
+                android:textColor="@color/order_day_font_gray"
+                android:textSize="@dimen/str_defaul_16"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/sty_line"
+                android:background="@color/bg_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing45"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/item_spacing10"
+                android:paddingRight="@dimen/item_spacing10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="菜名"
+                    android:textColor="@color/order_day_font_gray"
+                    android:textSize="@dimen/str_defaul_15" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="数量"
+                    android:textColor="@color/order_day_font_gray"
+                    android:textSize="@dimen/str_defaul_15" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="价格"
+                    android:textColor="@color/order_day_font_gray"
+                    android:textSize="@dimen/str_defaul_15" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="备注"
+                    android:gravity="right"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/pay_type_font"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/sty_line"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:layout_marginRight="@dimen/item_spacing10" />
+
+            <ListView
+                android:id="@+id/dish_list"
+                style="@style/listView_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/item_spacing10"
+                android:layout_marginRight="@dimen/item_spacing10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/ad_slider"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                custom:auto_cycle="true"
+                custom:indicator_visibility="invisible"
+                custom:pager_animation="Accordion"
+                custom:pager_animation_span="1100" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_layout_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_spacing40"
+                    android:layout_margin="@dimen/item_spacing1"
+                    android:background="@color/white_order_title"
+                    android:gravity="center"
+                    android:text="收银结算"
+                    android:textColor="@color/order_day_font_gray"
+                    android:textSize="@dimen/str_defaul_16"
+                    android:textStyle="bold" />
+
+                <View
+                    style="@style/sty_line"
+                    android:background="@color/bg_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/item_spacing15">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/item_spacing10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="合计金额"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+
+                            <TextView
+                                android:id="@+id/all_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥0.00"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/item_spacing10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="商家优惠"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+
+                            <TextView
+                                android:id="@+id/discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥0.00"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/item_spacing10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="支付方式"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+
+                            <TextView
+                                android:id="@+id/pay_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="现金"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/item_spacing0.5"
+                        android:layout_height="match_parent"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/item_spacing15">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/item_spacing10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="应收"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+
+                            <TextView
+                                android:id="@+id/total_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥0.00"
+                                android:textColor="@color/btn_red"
+                                android:textSize="@dimen/str_defaul_16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/item_spacing10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="实收"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+
+                            <TextView
+                                android:id="@+id/cost_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥0.00"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/item_spacing10">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="找零"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+
+                            <TextView
+                                android:id="@+id/change_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥0.00"
+                                android:textColor="@color/order_day_font_darkgray"
+                                android:textSize="@dimen/str_defaul_16" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scan_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/half_trans_gray"
+        android:gravity="center"
+        android:visibility="gone">
+        <LinearLayout
+            android:id="@+id/scan_dialog_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/scan_code_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing45"
+                android:textSize="@dimen/str_defaul_18"
+                android:textColor="@color/order_day_font_darkgray"
+                android:gravity="center"
+                android:text=""/>
+            <View
+                style="@style/sty_line"/>
+
+            <ImageView
+                android:id="@+id/scan_code_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/item_spacing10"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

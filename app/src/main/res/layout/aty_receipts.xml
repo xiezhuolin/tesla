@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/border"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:background="@color/white_order_title"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/item_spacing3"
+        android:layout_marginRight="@dimen/item_spacing3"
+        android:paddingLeft="@dimen/item_spacing15">
+
+        <TextView
+            android:id="@+id/print_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="选择小票类型"
+            android:textColor="@color/order_day_font_gray"
+            android:textSize="@dimen/str_defaul_18"/>
+    </LinearLayout>
+
+    <View style="@style/sty_line"
+          android:layout_margin="@dimen/item_spacing3"/>
+
+    <ListView
+        android:id="@+id/lv_receipts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dip"
+        android:layout_marginLeft="@dimen/item_spacing3"
+        android:layout_marginRight="@dimen/item_spacing3"
+        android:footerDividersEnabled="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing50"
+        android:layout_marginBottom="@dimen/item_spacing20"
+        android:layout_marginLeft="@dimen/item_spacing15"
+        android:layout_marginRight="@dimen/item_spacing15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/print_cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/item_spacing5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_gray"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/order_day_font_darkgray"
+            android:textSize="@dimen/str_defaul_16"/>
+
+        <TextView
+            android:id="@+id/print_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_spacing5"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_blue"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/str_defaul_16"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

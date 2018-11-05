@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/border"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing70"
+        android:layout_margin="@dimen/item_spacing3"
+        android:background="@color/white_order_title"
+        android:focusableInTouchMode="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/dialog_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/dialog_transparent_pressed"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/common_back"
+            android:textColor="@color/red"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="@string/sth_reserve_title"
+            android:padding="@dimen/item_spacing10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_30"/>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            style="@style/dialog_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dialog_transparent_pressed"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:paddingRight="@dimen/item_spacing15"
+            android:text="@string/common_sure"
+            android:textColor="@color/blue_table_nomber_title"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_spacing0.5"
+        android:background="@color/gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/item_spacing20">
+
+        <TextView
+            android:id="@+id/tv_oneStr"
+            style="@style/dialog_text_style"
+            android:padding="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:text="@string/sth_customer_name"
+            />
+
+        <cn.acewill.pos.next.widget.CommonEditText
+            android:id="@+id/ed_oneStr"
+            style="@style/ed_style"
+            android:hint="@string/sth_customer_name_hine"
+            android:layout_toRightOf="@+id/tv_oneStr"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            />
+
+        <TextView
+            android:id="@+id/tv_twoStr"
+            style="@style/dialog_text_style"
+            android:padding="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            android:text="@string/sth_phone"
+            android:layout_below="@+id/tv_oneStr"
+            />
+
+        <cn.acewill.pos.next.widget.CommonEditText
+            android:id="@+id/ed_twoStr"
+            style="@style/ed_style"
+            android:layout_below="@+id/tv_oneStr"
+            android:layout_toRightOf="@+id/tv_twoStr"
+            android:hint="@string/sth_phone_hine"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:layout_marginTop="@dimen/item_spacing10"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

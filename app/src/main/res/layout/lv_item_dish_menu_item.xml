@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/lin_conver"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp10"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lin_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_dishImagePath"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_pos"
+                android:scaleType="fitCenter"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dishName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:text="@string/ct_cp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/str_defaul_20"/>
+
+            <TextView
+                android:id="@+id/tv_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_dishName"
+                android:gravity="left"
+                android:paddingTop="@dimen/dp5"
+                android:paddingLeft="@dimen/dp10"
+                android:textColor="@color/main_order_item_bg"
+                android:textSize="@dimen/str_defaul_18"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_money"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp15"
+                android:paddingBottom="@dimen/dp30"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15"
+                android:drawableRight="@mipmap/arrow_right"
+                android:paddingTop="@dimen/dp30"
+                android:drawablePadding="@dimen/dp10"
+                android:text="22.00"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/str_defaul_18"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <cn.acewill.pos.next.widget.ScrolListView
+        android:id="@+id/lv_dish_package_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lin_top"
+        android:background="@color/white"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dip"
+        android:headerDividersEnabled="true"
+        android:transcriptMode="normal"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0.5"
+        android:background="@color/order_item_line_bg"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_below="@+id/lv_dish_package_item"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_listTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <GridView
+            android:id="@+id/tableall_gridv"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/item_spacing10"
+            android:background="@color/white"
+            android:horizontalSpacing="10dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="5"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:verticalSpacing="10dp">
+        </GridView>
+
+        <Button
+            android:id="@+id/btn_showArea"
+            android:layout_width="@dimen/item_spacing50"
+            android:layout_height="@dimen/item_spacing50"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:text="区域"/>
+    </RelativeLayout>
+
+    <cn.acewill.pos.next.widget.HVScrollView
+        android:id="@+id/scroll_hv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rel_table_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/img_bg">
+        </RelativeLayout>
+
+    </cn.acewill.pos.next.widget.HVScrollView>
+
+
+    <Button
+        android:id="@+id/btn_ListToLiveScener"
+        android:layout_width="@dimen/item_spacing50"
+        android:layout_height="@dimen/item_spacing50"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="70dp"
+        android:text="@string/table_style_live"/>
+
+</RelativeLayout>

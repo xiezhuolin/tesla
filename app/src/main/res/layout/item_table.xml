@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/table_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp110"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp5"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:gravity="center"
+        android:background="@drawable/btn_selector_blue"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/table_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx"
+            android:singleLine="true"
+            android:enabled="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18" />
+
+        <TextView
+            android:id="@+id/table_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/table_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/4"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/sp13" />
+    <ImageView
+        android:id="@+id/use_iv"
+        android:layout_width="@dimen/dp15"
+        android:layout_height="@dimen/dp15"
+        android:src="@drawable/table_use"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"/>
+
+    <LinearLayout
+        android:id="@+id/time_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:paddingLeft="@dimen/dp10"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="@dimen/dp12"
+            android:layout_height="@dimen/dp12"
+            android:src="@drawable/time"
+            />
+        <TextView
+            android:id="@+id/table_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp3"
+            android:text="00:00:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+
+</RelativeLayout>

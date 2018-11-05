@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:id="@+id/rejectLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/font_gray"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/dishName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:text="美味烧烤串"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_15" />
+
+                <ImageView
+                    android:id="@+id/servicestatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/servicestatus"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:text="1份"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/str_defaul_15" />
+
+            <TextView
+                android:id="@+id/dishPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:text="￥200.22"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/str_defaul_15" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/sty_line" />
+
+    <LinearLayout
+        android:id="@+id/dishDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/text_normal_padding"
+        android:paddingRight="@dimen/text_normal_padding"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_spacing60"
+            android:background="@color/bg_color"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_edit" />
+
+                <TextView
+                    android:id="@+id/remark"
+                    style="@style/base_both_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/item_spacing5"
+                    android:paddingRight="@dimen/item_spacing5"
+                    android:text="备注"
+                    android:maxLines="3"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/returnDish"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/item_spacing30"
+                    android:layout_marginRight="@dimen/item_spacing10"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_transf_btn"
+                    android:gravity="center"
+                    android:text="退菜"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_14" />
+
+                <TextView
+                    android:id="@+id/urgeDish"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/item_spacing30"
+                    android:layout_marginRight="@dimen/item_spacing10"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_transf_btn"
+                    android:gravity="center"
+                    android:text="催菜"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_14" />
+
+                <TextView
+                    android:id="@+id/splitBill"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/item_spacing30"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_transf_btn"
+                    android:gravity="center"
+                    android:text="分单"
+                    android:textColor="@color/font_black"
+                    android:textSize="@dimen/str_defaul_14" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

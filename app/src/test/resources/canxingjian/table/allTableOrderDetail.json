@@ -1,0 +1,78 @@
+{
+  "success": 1,
+  "orders": [
+    {
+      "orderinfo": {
+        "oid": "29",
+        "people": "1",
+        "tids": "1",
+        "ctid": null,
+        "newuid": "6",
+        "newtime": "2016-06-03 16:14:16",
+        "memo": null,
+        "cost": 536,
+        "orderstatus": "2",
+        "total": 536,
+        "costservice": 0,
+        "extradiscount": 0,
+        "block": "0",
+        "maid": "",
+        "ordermarket": "",
+        "totaldish": 536,
+        "cardcode": "",
+        "discountmoney": 0,
+        "maling": 0,
+        "bookmoney": 0,
+        "paytype": null
+      },
+      "orderitems": [
+        [
+          "173",
+          "2",
+          "1",
+          "0",
+          "6",
+          "2016-06-03 16:14:16",
+          "3",
+          268,
+          "1",
+          1,
+          null,
+          null,
+          [],
+          "",
+          null,
+          "",
+          268,
+          268,
+          0,
+          null,
+          "收银店员"
+        ],
+        [
+          "174",
+          "2",
+          "1",
+          "0",
+          "6",
+          "2016-06-03 16:14:16",
+          "3",
+          268,
+          "1",
+          1,
+          null,
+          null,
+          [],
+          "",
+          null,
+          "",
+          268,
+          268,
+          0,
+          null,
+          "收银店员"
+        ]
+      ]
+    }
+  ]
+}

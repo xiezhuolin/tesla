@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_main_bg_gray"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp55"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bg">
+
+        <TextView
+            android:id="@+id/tv_user"
+            style="@style/table_title_white"
+            android:drawableLeft="@mipmap/img_order_user"
+            android:paddingLeft="@dimen/item_spacing15"
+            android:text="@string/sth_home_user"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_order"
+            style="@style/table_title_white"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_user"
+            android:drawableLeft="@mipmap/img_order_order"
+            android:gravity="center"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:text="@string/sth_home_order"/>
+
+        <TextView
+            android:id="@+id/tv_menu"
+            style="@style/table_title_white"
+            android:layout_toRightOf="@+id/tv_order"
+            android:drawableLeft="@mipmap/img_menu_order"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp30"
+            android:text="@string/sth_home_dishmenu"/>
+
+        <TextView
+            android:id="@+id/tv_checkBox"
+            style="@style/table_title_white"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_menu"
+            android:drawableLeft="@mipmap/img_order_moneybox"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp30"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:text="@string/sth_home_check_box"/>
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_hang_order"-->
+        <!--style="@style/table_title_white"-->
+        <!--android:layout_toRightOf="@+id/tv_order"-->
+        <!--android:drawableLeft="@mipmap/img_order_hang"-->
+        <!--android:paddingLeft="@dimen/item_spacing10"-->
+        <!--android:text="@string/sth_home_hang_order"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_fetch_order"-->
+        <!--style="@style/table_title_white"-->
+        <!--android:layout_toRightOf="@+id/tv_hang_order"-->
+        <!--android:drawableLeft="@mipmap/img_order_fetch"-->
+        <!--android:paddingLeft="@dimen/item_spacing10"-->
+        <!--android:text="@string/sth_home_featch_order"/>-->
+
+
+        <TextView
+            android:id="@+id/tv_main_title"
+            style="@style/table_title_white"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wisdom_cash_register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_24"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_logOut"-->
+        <!--style="@style/table_title_white"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="@dimen/item_spacing20"-->
+        <!--android:drawableLeft="@mipmap/img_order_logout"-->
+        <!--android:paddingLeft="@dimen/item_spacing10"-->
+        <!--android:text="@string/sth_home_logout"/>-->
+
+        <TextView
+            android:id="@+id/tv_mainSelect"
+            style="@style/table_title_white"
+            android:layout_marginRight="@dimen/item_spacing10"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/img_order_select"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:text="@string/sth_home_main_select"/>
+
+        <TextView
+            android:id="@+id/tv_showView"
+            style="@style/table_title_white"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_spacing30"
+            android:layout_toLeftOf="@+id/tv_mainSelect"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/img_show_view"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:text="@string/sth_home_show_view"/>
+
+        <TextView
+            android:id="@+id/tv_search"
+            style="@style/table_title_white"
+            android:layout_marginRight="@dimen/item_spacing30"
+            android:layout_toLeftOf="@+id/tv_showView"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/img_search_order"
+            android:paddingLeft="@dimen/item_spacing10"
+            android:text="@string/sth_home_search"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </RelativeLayout>
+
+</LinearLayout>

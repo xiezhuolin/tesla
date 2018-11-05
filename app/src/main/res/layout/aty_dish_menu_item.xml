@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp55"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bg">
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_menu_back"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:layout_marginLeft="@dimen/dp15"
+            android:padding="@dimen/dp10"
+            android:layout_height="match_parent"/>
+
+
+        <TextView
+            android:id="@+id/tv_menu_title"
+            style="@style/table_title_white"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wisdom_cash_register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/str_defaul_24"/>
+
+        <ImageButton
+            android:id="@+id/img_cart"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_menu_gwc"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dp15"
+            android:padding="@dimen/dp10"
+            android:layout_height="match_parent"/>
+
+
+        <ImageButton
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/img_menu_search"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/img_cart"
+            android:layout_marginRight="@dimen/dp15"
+            android:padding="@dimen/dp10"
+            android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+    <GridView
+        android:id="@+id/gv_dish_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@color/transparent"
+        android:background="@color/order_item_line_bg"
+        android:numColumns="1"
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
+        android:scrollbars="none"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/item_spacing1">
+
+        <ImageView
+            android:id="@+id/iv_dishImagePath"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_pos"
+            android:scaleType="fitCenter"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lin_sole_out"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:background="@color/half_trans_gray"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/item_spacing3"
+                    android:paddingTop="@dimen/dp3"
+                    android:text="@string/sold_out"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_22"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="2.5"
+                android:background="@color/half_trans_gray"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_dishName"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="11111"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/str_defaul_24"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

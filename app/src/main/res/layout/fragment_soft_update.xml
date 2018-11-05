@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/item_spacing20"
+              android:paddingRight="@dimen/item_spacing30">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_spacing10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing40"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新提醒:"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <TextView
+                    android:id="@+id/update_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing15"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_spacing40"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最新版本:"
+                    android:textColor="@color/order_day_font_darkgray"
+                    android:textSize="@dimen/str_defaul_16"/>
+
+                <TextView
+                    android:id="@+id/update_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/item_spacing15"
+                    android:textColor="@color/font_blue"
+                    android:textSize="@dimen/str_defaul_16"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_spacing40"
+                android:gravity="center_vertical"
+                android:text="新版本特性:"
+                android:textColor="@color/order_day_font_darkgray"
+                android:textSize="@dimen/str_defaul_16"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_spacing50"
+                android:background="@drawable/btn_selector_blue"
+                android:gravity="center"
+                android:padding="@dimen/item_spacing10"
+                android:text="@string/check_update"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/upload_log"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_spacing50"
+                android:background="@drawable/btn_selector_blue"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/item_spacing10"
+                android:layout_below="@+id/update_btn"
+                android:padding="@dimen/item_spacing10"
+                android:text="@string/up_load_log"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/update_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/item_spacing10"
+        android:text=""
+        android:textColor="@color/order_day_font_darkgray"
+        android:textSize="@dimen/str_defaul_15"/>
+
+</LinearLayout>
