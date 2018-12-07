@@ -2,7 +2,7 @@ package cn.acewill.pos.next.service;
 
 import java.util.List;
 
-import cn.acewill.pos.next.factory.HostSelectionInterceptor;
+import cn.acewill.pos.next.factory.MyLogInterceptor;
 import cn.acewill.pos.next.model.Customer;
 import cn.acewill.pos.next.model.Definition;
 import cn.acewill.pos.next.model.payment.WaimaiType;
@@ -256,7 +256,7 @@ public class PosInfo {
     public void setServerUrl(String serverUrl) {
         this.serverUrl = serverUrl;
         //更新okhttp的baseUrl
-        HostSelectionInterceptor.setBaseUrl(serverUrl);
+        MyLogInterceptor.setBaseUrl(serverUrl);
     }
 
     public String getAppId() {

@@ -27,6 +27,7 @@ import android.widget.TextView;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import java.io.File;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -105,7 +106,6 @@ import cn.acewill.pos.next.ui.activity.newPos.ReportAty;
 import cn.acewill.pos.next.ui.activity.newPos.ShowReportAty;
 import cn.acewill.pos.next.ui.activity.newPos.StaffAty;
 import cn.acewill.pos.next.ui.activity.newPos.StandByCashAty;
-import cn.acewill.pos.next.ui.activity.newPos.UpLoadActivity;
 import cn.acewill.pos.next.ui.activity.newPos.WorkShiftHistoryAty;
 import cn.acewill.pos.next.ui.adapter.DefinitionAdp;
 import cn.acewill.pos.next.ui.fragment.FastFoodFragment;
@@ -114,7 +114,9 @@ import cn.acewill.pos.next.ui.presentation.SecondaryScreenShow;
 import cn.acewill.pos.next.utils.Constant;
 import cn.acewill.pos.next.utils.DialogUtil;
 import cn.acewill.pos.next.utils.DownUtlis;
+import cn.acewill.pos.next.utils.FileUtil;
 import cn.acewill.pos.next.utils.TimeUtil;
+import cn.acewill.pos.next.utils.ToastUitl;
 import cn.acewill.pos.next.utils.ToolsUtils;
 import cn.acewill.pos.next.utils.sunmi.SunmiSecondScreen;
 import cn.acewill.pos.next.widget.CommonEditText;
@@ -122,6 +124,8 @@ import cn.acewill.pos.next.widget.MainPopWindow;
 import cn.acewill.pos.next.widget.ProgressDialogF;
 import cn.acewill.pos.next.widget.ScrolGridView;
 import cn.weightservice.Weight;
+
+//import cn.acewill.pos.next.ui.activity.newPos.UpLoadActivity;
 
 /**
  * Created by DHH on 2016/12/23.
@@ -640,7 +644,6 @@ public class OrderDishMainAty extends BaseActivity {
 		}
 	}
 
-	private Dialog         dialog;
 	private TextView       title;
 	private ScrolGridView  gv_definition;
 	private LinearLayout   lin_select_work;
@@ -1933,11 +1936,10 @@ public class OrderDishMainAty extends BaseActivity {
 					daySettlement();
 				}
 				//上传日志
-				else if (event.getPosition() == PowerController.UPLOAD_LOG) {
+				if (event.getPosition()== PowerController.UPLOAD_LOG) {
 					ToolsUtils.writeUserOperationRecords("上传日志");
-					Intent intentUp = new Intent();
-					intentUp.setClass(OrderDishMainAty.this, UpLoadActivity.class);
-					startActivity(intentUp);
+					upLoadLog();
+					//						startActivity(new Intent(mContext, UpLoadActivity.class));
 				}
 				//备用金
 				else if (event.getPosition() == PowerController.STANDBY_CASH) {
@@ -2073,4 +2075,59 @@ public class OrderDishMainAty extends BaseActivity {
 		}
 	}
 
+	/**
+	 * 上传日志文件
+	 */
+	private Dialog dialog;
+
+	/**
+	 * 手动只能上传当天日志
+	 */
+	private void upLoadLog() {
+		dialog = DialogUtil
+				.createDialog(context, R.layout.dialog_uplog, 9, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+		//0.表示今天
+		//1.表示昨天
+		//2.表示前天
+		File log = FileUtil.getUploadLog(0);
+		if (log == null) {
+			ToastUitl.showShort(context, "没有今天的日志");
+			return;
+		}
+		upLog(log, dialog);
+		//        zipFile(filePath, time,dialog);
+	}
+
+
+	//调用上传接口
+	private void upLog(final File logFile, final Dialog dialog) {
+		try {
+			SystemService systemService = SystemService.getInstance();
+			if (logFile != null) {
+				systemService.upLoadLogFile(logFile, new ResultCallback() {
+					@Override
+					public void onResult(Object result) {
+						dialog.dismiss();
+						ToastUitl.showShort(context, ToolsUtils.returnXMLStr("upload_success"));
+						Log.i("日志上传成功:", "success");
+					}
+
+					@Override
+					public void onError(PosServiceException e) {
+						dialog.dismiss();
+						ToastUitl.showShort(context, ToolsUtils.returnXMLStr("upload_failure") + e
+								.getMessage());
+						Log.e("日志上传失败:", e.getMessage());
+					}
+				});
+			}
+		} catch (PosServiceException e) {
+			e.printStackTrace();
+			dialog.dismiss();
+			ToastUitl.showShort(context, ToolsUtils.returnXMLStr("upload_failure") + e
+					.getMessage());
+			Log.e("日志上传失败:", e.getMessage());
+		}
+	}
 }

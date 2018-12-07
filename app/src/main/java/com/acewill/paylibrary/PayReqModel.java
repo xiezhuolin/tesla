@@ -22,5 +22,5 @@ public class PayReqModel {
 	public String storeId;//门店id
 	public String terminalId;//
 	public int pay_type; // wtf支付方式 根据支付类型生成不同二维码 0：微信；1：支付宝 ，不传则默认为微信  int 类型
-
+	public String paymentStr;//支付参数(支付宝需要)
 }

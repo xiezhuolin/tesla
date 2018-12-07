@@ -198,7 +198,6 @@ public class DishAdp<T> extends BaseAdapter {
     }
 
     public void addDish(Dish mDishModel) {
-        ToolsUtils.writeUserOperationRecords("点击了("+mDishModel.getDishName()+")菜品");
         Integer dishOptionId = TimeUtil.getStringData();
         mDishModel.setDishOptionId(dishOptionId);
         if (mDishModel.isPackage()) {

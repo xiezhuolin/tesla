@@ -9,8 +9,10 @@ import cn.acewill.pos.next.model.order.Order;
 import cn.acewill.pos.next.model.order.OrderItem;
 import cn.acewill.pos.next.service.retrofit.response.KDSResponse;
 import cn.acewill.pos.next.service.retrofit.response.PosResponse;
+import cn.acewill.pos.next.service.retrofit.response.pay.BaseWechatPayResult;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -86,6 +88,7 @@ public interface RetrofitOrderService {
     Observable<PosResponse<List<Order>>> syncNetOrders(@Query( "appid" ) String appId, @Query( "storeid" ) String storeId, @Query( "preordertime" ) Integer preordertime);
 
     /**
+     *
      * 确认接收网上的订单
      *
      * @param appId
@@ -235,6 +238,85 @@ public interface RetrofitOrderService {
     Observable<PosResponse<List<CardRecord>>> getCardRecords(@Query( "appId" ) String appId,
                                                              @Query( "brandId" ) String brandId,
                                                              @Query( "storeId" ) String storeId);
+
+
+    /**
+     * 微信刷卡支付
+     * @param cacheControl
+     * @param appId
+     * @param brandId
+     * @param storeId
+     * @param outTradeNo
+     * @param totalFee
+     * @param body
+     * @param authCode
+     * @param paymentStr
+     * @param timeStart
+     * @param timeExpire
+     * @param deviceInfo
+     * @param spbillCreateIp
+     * @return
+     */
+    @POST("/api/wxpay/micropayToWepay")
+    Observable<BaseWechatPayResult> micropayToWepay(
+            @Header("Cache-Control") String cacheControl,
+            @Query("appId") String appId,
+            @Query("brandId") String brandId,
+            @Query("storeId") String storeId,
+            @Query("outTradeNo") String outTradeNo,
+            @Query("totalFee") int totalFee,
+            @Query("body") String body,
+            @Query("authCode") String authCode,
+            @Query("paymentStr") String paymentStr,
+            @Query("timeStart") String timeStart,
+            @Query("timeExpire") String timeExpire,
+            @Query("deviceInfo") String deviceInfo,
+            @Query("spbillCreateIp") String spbillCreateIp);
+
+    /**
+     * 查询微信支付结果
+     * @param cacheControl
+     * @param appId
+     * @param brandId
+     * @param storeId
+     * @param outTradeNo
+     * @param paymentStr
+     * @return
+     */
+    @POST("/api/wxpay/orderQuery")
+    Observable<BaseWechatPayResult> queryWechatPayResult(
+            @Header("Cache-Control") String cacheControl,
+            @Query("appId") String appId,
+            @Query("brandId") String brandId,
+            @Query("storeId") String storeId,
+            @Query("outTradeNo") String outTradeNo,
+            @Query("paymentStr") String paymentStr);
+
+    /**
+     * 微信扫码支付
+     * @param cacheControl
+     * @param appId
+     * @param brandId
+     * @param storeId
+     * @param outTradeNo
+     * @param totalFee
+     * @param spbillCreateIp
+     * @param body
+     * @param paymentStr
+     * @return
+     */
+    @POST("/api/wxpay/unifiedOrderToWepay")
+    Observable<BaseWechatPayResult> unifiedOrderToWepay(
+            @Header("Cache-Control") String cacheControl,
+            @Query("appId") String appId,
+            @Query("brandId") String brandId,
+            @Query("storeId") String storeId,
+            @Query("outTradeNo") String outTradeNo,
+            @Query("totalFee") int totalFee,
+            @Query("spbillCreateIp") String spbillCreateIp,
+            @Query("body") String body,
+            @Query("paymentStr") String paymentStr);
+
 
 
 }

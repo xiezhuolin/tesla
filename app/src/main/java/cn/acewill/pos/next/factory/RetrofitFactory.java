@@ -35,7 +35,8 @@ public class RetrofitFactory {
         String serverUrl = PosInfo.getInstance().getServerUrl();
         if (serverUrl == null) {
             //创建service时允许服务器地址是空，因为有些service需要在用户登录前创建，那时候服务器地址还没有设置
-            serverUrl = "http://127.0.0.1";
+            serverUrl = "http://www.smarant.com";
+            PosInfo.getInstance().setServerUrl(serverUrl);
         }
 
         return buildService(serverUrl, serviceClass);
@@ -43,16 +44,18 @@ public class RetrofitFactory {
 
     public static <T> T buildService(String baseUrl, Class<T> serviceClass) {
 
-        HttpLoggingInterceptor bodyInterceptor = new HttpLoggingInterceptor();
-        bodyInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY); //在日志中打印http消息体(同时也会打印消息头)bodyInterceptor
+        //        HttpLoggingInterceptor bodyInterceptor = new HttpLoggingInterceptor();
+        //        bodyInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY); //在日志中打印http消息体(同时也会打印消息头)bodyInterceptor
 
-        //SSLContext sslContext = setCertificates(MyApplication.getInstance().getClass().getClassLoader().getResourceAsStream("assets/acewill.cer"));
+        //        SSLContext sslContext = setCertificates(MyApplication.getInstance().getClass().getClassLoader().getResourceAsStream("assets/acewill.cer"));
 
         OkHttpClient.Builder builder = new OkHttpClient.Builder().retryOnConnectionFailure(true)
-        .connectTimeout(15, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS);
+                .connectTimeout(15, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS);
 
-        builder.addInterceptor(new HostSelectionInterceptor());
-        builder.addInterceptor(bodyInterceptor);
+
+        //		builder.addInterceptor(new HostSelectionInterceptor());
+        builder.addInterceptor(new MyLogInterceptor());
+        //        builder.addInterceptor(bodyInterceptor);
         //  builder.sslSocketFactory(sslContext.getSocketFactory());
 
         //登录成功后，通过CookieInterceptor设置cookie
@@ -71,6 +74,7 @@ public class RetrofitFactory {
 
         return (T) retrofit.create(serviceClass);
     }
+
 
     public static <T> T buildKdsService(String baseUrl, Class<T> serviceClass) {
 
@@ -98,12 +102,13 @@ public class RetrofitFactory {
         SSLContext sslContext = null;
         try {
             CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
-            KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
+            KeyStore           keyStore           = KeyStore.getInstance(KeyStore.getDefaultType());
             keyStore.load(null);
             int index = 0;
             for (InputStream certificate : certificates) {
                 String certificateAlias = Integer.toString(index++);
-                keyStore.setCertificateEntry(certificateAlias, certificateFactory.generateCertificate(certificate));
+                keyStore.setCertificateEntry(certificateAlias, certificateFactory
+                        .generateCertificate(certificate));
 
                 try {
                     if (certificate != null)

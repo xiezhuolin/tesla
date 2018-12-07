@@ -280,7 +280,6 @@ public class Cart {
                     cleanAllOrderMarketState();
                     item.quantity++;
                     DishDataController.addDishMark(item.dishKind, item);
-                    ToolsUtils.writeUserOperationRecords("TIME===>菜品加一份时间:" + TimeUtil.getStringTimeLong(System.currentTimeMillis()) + "增加了(" + item.getDishName() + ")菜品");
                     this.notifyContentChange();
                     return item.quantity;
                 }

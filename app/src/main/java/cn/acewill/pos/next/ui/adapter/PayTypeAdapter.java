@@ -18,6 +18,7 @@ import com.acewill.paylibrary.EPayTask;
 import com.acewill.paylibrary.MicropayTask;
 import com.acewill.paylibrary.PayReqModel;
 import com.acewill.paylibrary.epay.EPayResult;
+import com.google.gson.Gson;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -62,11 +63,16 @@ import cn.acewill.pos.next.service.StoreBusinessService;
 import cn.acewill.pos.next.service.retrofit.response.LKLResponse;
 import cn.acewill.pos.next.service.retrofit.response.ValidationResponse;
 import cn.acewill.pos.next.service.retrofit.response.WeiFuTongResponse;
+import cn.acewill.pos.next.service.retrofit.response.pay.BaseWechatPayResult;
+import cn.acewill.pos.next.service.retrofit.response.pay.GsonUtils;
+import cn.acewill.pos.next.service.retrofit.response.pay.WechatPayResult;
+import cn.acewill.pos.next.service.retrofit.response.pay.WechatPayResult2;
 import cn.acewill.pos.next.ui.activity.CheckOutNewAty;
 import cn.acewill.pos.next.utils.CheckOutUtil;
 import cn.acewill.pos.next.utils.Constant;
 import cn.acewill.pos.next.utils.CreateImage;
 import cn.acewill.pos.next.utils.DialogUtil;
+import cn.acewill.pos.next.utils.FileLog;
 import cn.acewill.pos.next.utils.PayDialogUtil;
 import cn.acewill.pos.next.utils.ScanGunKeyEventHelper;
 import cn.acewill.pos.next.utils.TimeUtil;
@@ -129,6 +135,9 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
     private int wftPayType = 3;//选择威富通 是微信支付还是支付宝支付  0是微信 1是支付宝
     private Store store;
     private boolean isClickPay = true;
+
+    private OrderService mOrderService;
+
     public boolean isClickPay() {
         return isClickPay;
     }
@@ -146,6 +155,11 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
         mScanGunKeyEventHelper = new ScanGunKeyEventHelper(this);
         isDisCount = false;
         posInfo = PosInfo.getInstance();
+        try {
+            mOrderService = OrderService.getInstance();
+        } catch (PosServiceException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -217,6 +231,7 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
                     if (result > 0) {
                         orderNewId = result;
                         outPay(barcode, result, isAgain);
+//                        outPay2(barcode, result, isAgain);
                     }
                     else{
                         setClickPay(true);
@@ -315,6 +330,7 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
                         if (printMoney.compareTo(BigDecimal.ZERO) == 1) {
                             pay_channel = PayReqModel.PTID_SSS_ALI;
                             scanLogic(payment.getId());
+//                            scanLogic2(payment.getId());
                         } else {
                             aty.showToast(ToolsUtils.returnXMLStr("please_enter_a_valid_amount"));
                         }
@@ -329,6 +345,7 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
                         if (printMoney.compareTo(BigDecimal.ZERO) == 1) {
                             pay_channel = PayReqModel.PTID_SSS_WEIXIN;
                             scanLogic(payment.getId());
+//                            scanLogic2(payment.getId());
                         } else {
                             aty.showToast(ToolsUtils.returnXMLStr("please_enter_a_valid_amount"));
                         }
@@ -348,6 +365,7 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
                                     wftPayType = (int)o;
                                     aty.setWftPayType(wftPayType);
                                     scanLogic(payment.getId());
+//                                    scanLogic2(payment.getId());
                                 }
                             });
                         } else {
@@ -454,7 +472,70 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
                 break;
         }
     }
+    //扫码判断
+    private void scanLogic2(int payTypeID) {
+        setClickPay(false);
+        // 正扫
+        if (Store.getInstance(context).isFront()) {
 
+            progressDialog.showLoading("");
+            String storeName = Store.getInstance(context).getStoreName();
+            PayReqModel model = new PayReqModel();
+            task = new InTask();
+            model.totalAmount = printMoney.setScale(2, BigDecimal.ROUND_DOWN).doubleValue();
+            model.orderNo = aty.orderId;
+            model.wxGoodsDetail = TextUtils.isEmpty(storeName) ? ToolsUtils.returnXMLStr("product_details") : storeName;
+            model.isDebug = isDebug;
+            model.payType = pay_channel;
+            model.authCode = "";
+            model.aliGoodsItem = aty.aliGoodsItem;
+            model.storeName = TextUtils.isEmpty(storeName) ? ToolsUtils.returnXMLStr("food_consumption") : storeName;
+            model.storeId = Store.getInstance(context).getStoreId();
+            model.terminalId = Store.getInstance(context).getDeviceName();
+
+            mOrderService.wechatSaoMa(model, new ResultCallback<BaseWechatPayResult>() {
+                @Override
+                public void onResult(BaseWechatPayResult result) {
+                    if (result.getResult() == 0) {
+                        try {
+                            WechatPayResult2 bean = GsonUtils
+                                    .getSingleBean(result
+                                            .getContent(), WechatPayResult2.class);
+                            FileLog.log("微信扫码支付结果>"+new Gson().toJson(bean));
+                            if ("SUCCESS".equals(bean.getResult_code())) {
+                                String qr_code = bean.getCode_url();
+//                                mView.returnWechatSaoMaResult(new SelfPosPayResult(PayResultType.PAY_INPROGRESS, PayResultMsg.PAY_INPROGRESS, qr_code));
+                            } else {
+//                                mView.returnWechatSaoMaResult(new SelfPosPayResult(PayResultType.PAY_FAIL, PayResultMsg.PAY_FAIL, bean
+//                                        .getReturn_msg()));
+                            }
+                        } catch (Exception e) {
+//                            mView.returnWechatSaoMaResult(new SelfPosPayResult(PayResultType.PAY_ERROR, PayResultMsg.PAY_ERROR));
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                @Override
+                public void onError(PosServiceException e) {
+
+                }
+            });
+
+
+//            if(wftPayType == 0 || wftPayType == 1)
+//            {
+//                model.pay_type = wftPayType;
+//                createWtfZsQrCode();
+//            }
+//            else{
+//                task.execute(model);
+//            }
+        } else {
+            //调用扫码枪
+            scanGunDialog();
+        }
+    }
     //扫码判断
     private void scanLogic(int payTypeID) {
         setClickPay(false);
@@ -669,7 +750,62 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
         }
     }
 
+    // 反扫支付(扫码枪扫完后调用这个方法)
+    private void outPay2(String code, Long orderNewId, boolean isQuery) {
+        progressDialog.showLoading(ToolsUtils.returnXMLStr("being_paid"));
+        String storeName = Store.getInstance(context).getStoreName();
+        PayReqModel model = new PayReqModel();
+        model.totalAmount = printMoney.setScale(2, BigDecimal.ROUND_DOWN).doubleValue();
+        if (ToolsUtils.isReverseCheckOut(aty.reverseCheckOutFlag)) {
+            model.orderNo = orderNewId + "";
+        } else {
+            model.orderNo = aty.orderId;
+        }
+        model.wxGoodsDetail = TextUtils.isEmpty(storeName) ? ToolsUtils.returnXMLStr("product_details") : storeName;
+        model.isDebug = isDebug;
+        model.payType = pay_channel;
+        model.authCode = code;
+        model.aliGoodsItem = aty.aliGoodsItem;
+        model.isQuery = isQuery;
+        model.storeName = TextUtils.isEmpty(storeName) ? ToolsUtils.returnXMLStr("food_consumption") : storeName;
+        model.storeId = Store.getInstance(context).getStoreId();
+        model.terminalId = Store.getInstance(context).getDeviceName();
 
+        mOrderService.wechatPay(model, new ResultCallback<BaseWechatPayResult>() {
+            @Override
+            public void onResult(BaseWechatPayResult result) {
+                if (result.getResult() == 0) {
+                    String content = result.getContent();
+                    FileLog.log(content);
+                    try {
+                        WechatPayResult bean = GsonUtils
+                                .getSingleBean(content, WechatPayResult.class);
+                        if ("SUCCESS".equals(bean.getResult_code())) {
+                            FileLog.log(content);
+                            //									mView.returnWechatShuaKaResult(new SelfPosPayResult(PayResultType.PAY_SUCCESS, PayResultMsg.PAY_SUCCESS));
+                        } else if ("FAIL".equals(bean.getResult_code()) && "USERPAYING"
+                                .equals(bean.getErr_code())) {
+                            //									mView.returnWechatShuaKaResult(new SelfPosPayResult(PayResultType.USER_PAYING, PayResultMsg.USER_PAYING, bean
+                            //											.getErr_code_des()));
+                        } else if ("FAIL".equals(bean.getResult_code())) {
+                            //									mView.returnWechatShuaKaResult(new SelfPosPayResult(PayResultType.PAY_FAIL, PayResultMsg.PAY_FAIL, bean
+                            //											.getErr_code_des()));
+                        } else {
+                            //									mView.returnWechatShuaKaResult(new SelfPosPayResult(PayResultType.PAY_UNKNOW, PayResultMsg.PAY_UNKNOW));
+                        }
+                    } catch (Exception e) {
+                        //								mView.returnWechatShuaKaResult(new SelfPosPayResult(PayResultType.PAY_ERROR, PayResultMsg.PAY_ERROR));
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onError(PosServiceException e) {
+
+            }
+        });
+    }
 
     // 反扫支付(扫码枪扫完后调用这个方法)
     private void outPay(String code, Long orderNewId, boolean isQuery) {
@@ -912,6 +1048,7 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
                     getOrderId(code_scan, false);
                 } else {
                     outPay(code_scan, 0L, false);
+//                    outPay2(code_scan, 0L, false);
                 }
             }
         }
@@ -938,6 +1075,7 @@ public class PayTypeAdapter extends BaseAdapter implements ScanGunKeyEventHelper
             getOrderId(code_scan, isAgain);
         } else {
             outPay(code_scan, 0L, isAgain);
+//            outPay2(code_scan, 0L, isAgain);
         }
         scanGunDialog();
     }

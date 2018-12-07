@@ -14,7 +14,6 @@ import cn.acewill.pos.next.base.adapter.BaseAdapter;
 import cn.acewill.pos.next.config.MyApplication;
 import cn.acewill.pos.next.model.dish.Dish;
 import cn.acewill.pos.next.model.dish.DishDiscount;
-import cn.acewill.pos.next.utils.ToolsUtils;
 
 /**
  * Created by DHH on 2016/6/17.
@@ -47,7 +46,6 @@ public class DiscountAdp<T> extends BaseAdapter {
             textView.setText(discountPrice+"￥/"+discount.name);
             if(current_select == position)
             {
-                ToolsUtils.writeUserOperationRecords("选择了("+discountPrice+"￥/"+discount.name+")折扣");
                 textView.setBackgroundResource(R.drawable.border_green);
             }
             else
